@@ -1,0 +1,163 @@
+.mobnav{
+    display: none;
+}
+.header-about{
+    background: #fff;
+    width: 100%;
+    height:125px
+}
+.header-about .header-aboutUs{
+    width: 1200px;
+    height: 125px;
+    margin: 0 auto;
+
+}
+.header-about .header-aboutUs img{
+    float: left;
+    height: 50px;
+    width: 185px;
+    margin-top: 28px;
+}
+ .header-about .header-aboutUs .aboutSpan1{
+    display: inline-block;
+    height: 50px;
+    width: 1px ;
+    background: #000;
+    margin-left: 50px;
+    margin-top: 30px;
+    float: left;
+}
+.header-about .header-aboutUs .aboutSpan2{
+    display: inline-block;
+    font-size: 24px;
+    margin-left: 20px;
+    height: 50px;
+    margin-top: 40px;
+    float: left;
+
+}
+
+.commonAbout{
+    width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    margin-bottom: 60px;
+
+}
+.commonAbout .aboutBox{
+    padding: 60px 58px ;
+    overflow: hidden;
+}
+.commonAbout .aboutBox .aboutLeft{
+    float: left;
+}
+.commonAbout .aboutBox .aboutLeft .leftUl{
+    width: 160px;
+    /*border-right: 1px solid #666;*/
+}
+.commonAbout .aboutBox .aboutLeft .leftUl .leftLi{
+    position: relative;
+    font-size: 14px;
+    color: #333;
+    height: 40px;
+    line-height: 40px;
+
+}
+.commonAbout .aboutBox .aboutLeft .leftUl .leftLi.active:after{
+    content: url("/images/pics/smallyou.png");
+    position: absolute;
+    top: 14px;
+    left: 78px;
+    
+}
+.commonAbout .aboutBox .aboutRight{
+    float: left;
+    width: 922px;
+
+
+}
+.commonAbout .aboutBox .aboutRight .rightAbout .aboutText{
+    text-indent: 2em;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    
+}
+.commonAbout .aboutBox .aboutRight .rightAbout .info_text_tip{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.commonAbout .aboutBox .aboutRight .rightAbout .info_text_sec{
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+.commonAbout .aboutBox .aboutRight .rightAbout .info_text_p{
+    font-size: 16px;
+    line-height: 34px;
+}
+
+
+
+
+@media screen and (max-width: 768px){
+    .mobnav{
+        display: block;
+        height: 45px;
+    }
+    .mobnav .mobnav_Li{
+        float: left;
+        height: 45px;
+        background: #4258ab;
+        line-height: 45px;
+        text-align: center;
+    }
+    .mobnav .mobnav_Li.active{
+        background: #2a4888;
+    }
+    .mobnav .mobnav_Li a{
+        color: #fff;
+    }
+    .header-about{
+        display: none;
+    }
+    .wrap .header .header-about{
+        display: none;
+    }
+    .commonAbout{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .commonAbout .aboutBox{
+        padding: 20px 15px;
+    }
+    .commonAbout .aboutBox .aboutLeft{
+        float: none;
+        display: none;
+    }
+    .commonAbout .aboutBox .aboutRight{
+        float: none;
+        width: 100%;
+    }
+    .mobnav .mobnav_Li a:hover{
+        color: #fff!important;
+    }
+    .commonAbout .aboutBox .aboutLeft .leftUl .leftLi a:hover{
+        color: #fff!important;
+    }
+
+    .commonAbout .aboutBox .aboutRight .rightRelation .relationText,
+    .commonAbout .aboutBox .aboutRight .linkText,
+    .commonAbout .aboutBox .aboutRight .rightAbout .aboutText,
+    .commonAbout .aboutBox .aboutRight  .statementText{
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 30px;
+
+    }
+
+}
+
+
+

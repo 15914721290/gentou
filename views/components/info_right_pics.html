@@ -1,0 +1,83 @@
+<ul class="cm_pc_12 cm_bf cm_mb20px right_ts_main" id="jingcaituku">
+        <li class="cm_pc_12 cm_prl20px cm_mb05">
+            <div class="cm_pc_6 cm_hl205 cm_bb1ce">
+                <h2 class="cm_c1c">精彩图片</h2>
+            </div>
+            <div class="cm_pc_6 cm_c7c">
+                <div class="cm_pc_12 cm_tc right_ts">
+                    <div class="cm_pc_6 cm_hl205 cm_bl1ce cm_bt2c1 cm_c1c cm_bb1ce">
+                        <span class="cm_fs09">热门图片</span>
+                    </div>
+                    <div class="cm_pc_6 cm_hl205 cm_bl1ce cm_bt1ce cm_br1ce">
+                        <span class="cm_fs09">全部图片</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="cm_pc_12 cm_minh8 cm_tc right_ts_list">
+            <ul class="cm_pc_12 cm_pr20px cm_lh2 ">
+                <% for(k in indexList.types36){ %>
+                    <% var item = indexList.types36[k] %>
+                    <li class="cm_pc_6 cm_mb1" style="padding:0 20px;">
+                        
+                            <div class="cm_pc_12  info_pics">
+                                <div class="cm_w100 cm_h8 info_pics_pic scaleImg">
+                                    <a href="<% if(item.Type == 0){ %><%=site.path%>/a/<%= moment(item.EditDate).format('YYYYMMDD') %><%= item.Id %>.html<% }else{ %><%=site.path%>/pics/<%= item.Id %>.html<% } %>" target="_blank" title="<%= item.Title %>">
+                                    <img class="cm_wh100 cm_bs100 lazy " data-original="<%= item.Thumbnail %>"/>
+                                    </a>
+                                </div>
+                                <div class="cm_pa cm_bl0 cm_z2 cm_w100  cm_hl2">
+                                    <a href=<% if(item.Type == 0){ %><%=site.path%>/a/<%= moment(item.EditDate).format('YYYYMMDD') %><%= item.Id %>.html<% }else{ %><%=site.path%>/pics/<%= item.Id %>.html<% } %>" target="_blank" title="<%= item.Title %>">
+                                    <span class="cm_pc_12 cm_o08 cm_fs08 cm_bk02 cm_cf" style="height:32px;line-height:32px;overflow:hidden;"><%= item.Title.substring(0,12) %></span>
+                                    </a>
+                                </div>
+                            </div>
+                    </li>
+                <% } %>
+             </ul>
+             <ul class="cm_pc_12 cm_pr20px cm_lh2 cm_dn " >
+                 <% for(k in indexList.types37){ %>
+                     <% var item = indexList.types37[k] %>
+                     <li class="cm_pc_6 cm_mb1" style="padding:0 20px;">
+
+                        <div class="cm_pc_12  info_pics">
+                            <div class="cm_w100 cm_h8 info_pics_pic scaleImg">
+                                <a href="<% if(item.Url){ %><%= item.Url %><% }else{ %><%=site.path%>/pics/<%= item.Id %>.html<% } %>" target="_blank" title="<%= item.Title %>">
+                                <img class="cm_wh100 cm_bs100 lazy " data-original="<%= item.Thumbnail %>"/>
+                                </a>
+                            </div>
+                            <div class="cm_pa cm_bl0 cm_z2 cm_w100  cm_hl2">
+                                <a href="<% if(item.Url){ %><%= item.Url %><% }else{ %><%=site.path%>/pics/<%= item.Id %>.html<% } %>" target="_blank" title="<%= item.Title %>">
+                                <span class="cm_pc_12 cm_o08 cm_fs08 cm_bk02 cm_cf" style="height:32px;line-height:32px;overflow:hidden;"><%= item.Title.substring(0,12) %></span>
+                                </a>
+                            </div>
+                        </div>
+
+                     </li>
+                 <% } %>
+             </ul>
+        </li>
+    </ul>
+
+
+    <style>
+         @media screen and (max-width: 768px){
+             .info_pics{
+              
+                 height: 155px;
+                 margin: 0 auto;
+             }
+            .scaleImg.info_pics_pic{
+                height: 112px!important;
+                margin: 0 auto;
+            }
+            .info_pics span{
+                background: none!important;
+                color: #000!important;
+                max-height: 40px;
+                line-height: 20px;
+                overflow: hidden;
+            }
+         }
+    
+    </style>

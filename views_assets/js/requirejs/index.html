@@ -1,0 +1,30 @@
+<% include ../common/header.html %>
+<div class="cm_main2">
+	<div id="bc_head"><% include ../components/index_head.html %></div>
+	<div class="cm_main cm_c6b">
+		<ul class="row cm_prl05mob">
+			<% include ../components/index_toutiao.html%>	
+			<% include ../components/index_column.html%>
+			<% include ../components/index_pics.html%>
+			<% include ../components/index_baike.html%>
+		</ul>
+	</div>
+	<% include ../components/index_friend.html%>
+	<div id="bc_foot"><% include ../components/index_foot.html %></div>
+</div>
+<link rel="stylesheet" href="<%=site.path%>/js/jqplugin/idangerous.swiper.min.css">
+<link rel="stylesheet" href="<%=site.path%>/css/apps/index01.css">
+<script>
+	//定义本html中的数据控制器js,所有操作都在js中进行
+//name名称
+//type为文件类型,
+//path为views_actions文件夹下的路径（index/对应views_actions中index文件夹）,
+//filename为path='index/'中index文件夹下的index.js,为index.js的文件名index
+//isFirst=1时优先加载,只要是公共组件就必须设置为1
+window.loadAction = [
+    {name:'swiper',filename:'idangerous.swiper.min',isFirst:1,path:'js/jqplugin/',type:'js'},
+    {name:'channel_swiper',filename:'channel_swiper',isFirst:0,path:'single/',type:'js'},
+    {name:'index_index',filename:'index_index',isFirst:0,path:'single/',type:'js'}
+];
+</script>
+<% include ../common/footer.html %>

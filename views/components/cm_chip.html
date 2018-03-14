@@ -1,0 +1,15 @@
+<div class="chip">
+    <a href="<%=site.path%>/" target="_blank">唯爱健康网</a>
+    <a href="<%=site.path%>/<%= chip.alias_01 %>/" target="_blank"><%= chip.name_01 %></a>
+    <% if(chip.addA){ %>
+    <a class="active" href="<%=site.path%>/<%= chip.alias_01 %>/<%= chip.alias_02 %>/" target="_blank"><%= chip.name_02 %></a>
+    <% }else{ %>
+    <a  href="<%=site.path%>/<%= chip.alias_01 %>/<%= chip.alias_02 %>/" target="_blank"><%= chip.name_02 %></a>
+    <% } %>
+    <% if(chip.flag){ %>
+    <a class="active" href="javascript:;">正文</a>
+    <% } %>
+</div>
+
+<link rel="stylesheet" type="text/css" href="<%=site.path%>/css/apps/cm_chip.css"/>
+

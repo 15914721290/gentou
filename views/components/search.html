@@ -1,0 +1,26 @@
+<ul class="cm_pc_10 cm_mob_12 cm_z99" >
+    <li class="cm_pc_12 cm_pr20mob cm_pl20mob">
+        <div class="cm_pc_12 cm_input cm_hl3 cm_bl1cc cm_bt1cc cm_bb1cc cm_brtl02 cm_brbl02">
+            <div class="cm_pa cm_tl0 cm_hl3 cm_pop_menu02">
+                <span class="cm_fl cm_pr cm_w3 cm_tc">
+                    <span class="cm_pc_12">全部</span>
+                </span>
+                <img class="cm_fl cm_mtb1 cm_bs100" src="<%=site.path%>/images/index/arrow_down_black.png" />
+            </div>
+            <ul class="cm_pa cm_tl0 cm_w4 cm_mt3 cm_bf cm_tc cm_bl1ce cm_br1ce cm_bb1ce menu_pop02 cm_dn">
+                <% var arrs = ['全部','平台','资讯','百科'],lens=arrs.length;
+                for(var i2=0;i2<lens;i2++){%>
+                    <li class="cm_pc_12 cm_hl3 cm_bb1ce"><%=arrs[i2]%></li>
+                <%}%>
+            </ul>
+            <input class="cm_pl405 cm_bf cm_c8c" name="search" id="search"  maxlength="38" type="text" position="<% if (typeof(position) !== 'undefined') { %><%= position %><% } %>" value="请输入搜索关键字" data-value="<%= data.message %>" />
+        </div>
+    </li>
+    <li class="cm_pa cm_tr0 cm_pr20mob cm_z2">
+        <a class="seacrhLink" href="<%=site.path%>/search/k=%> "  target="<%if(menuid!='search'){%>_blank<%}%>" id="ck_soso">
+            <div class="cm_fl cm_w5 cm_h3 cm_c1b cm_brtr02 cm_brbr02">
+                <img class="cm_fc cm_bs100 search_img cmqd" src="<%=site.path%>/images/index/soso.png">
+            </div>
+        </a>
+    </li>
+</ul>

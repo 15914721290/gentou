@@ -1,0 +1,56 @@
+<% include ../common/header.html %>
+
+
+<div class="cm_main2">
+
+	<div id="bc_head"><% include ../components/index_head.html %></div>
+
+	
+	<div class="cm_main cm_c6b">
+		<ul class="cm_row ">
+			<li class="cm_mob_12 cm_pc_8 cm_pr20pc cm_mt20px">
+				<div class="cm_pc_12 cm_pr cm_bf search_h1 cm_mb20px">
+					<div class="cm_pc_12 cm_prl6 cm_pr cm_mtb2">
+						<% include ../components/search.html%>
+						<!--热搜词-->
+						<ul class="cm_pc_12  cm_lh3">
+							<li class="cm_fl cm_ml05 cm_fs08">热搜词：</li>
+							<%var types1=indexList.types1;
+								for(it1 in types1){%>
+								<li class="cm_fl cm_ml05">
+									<a class="cm_hvc1c" href="<%=site.path%>/search/k=<%=types1[it1].Title%>" title="<%=types1[it1].Title%>" target="_blank">
+										<span class="cm_fs08"><%=types1[it1].Title%></span>
+									</a>
+								</li>
+							<%}%>
+						</ul>
+					</div>
+				</div>
+				<%if(articleList.isHave==0){%>
+				<div class="cm_pc_12 cm_pr cm_pl20px cm_mb20px cm_c4c"><span class="cm_fs09">很抱歉，没有找到与“<span class="cm_c1c"><%= data.message %></span>”相关的信息</span></div>
+				<%}%>
+				<% include ../components/info_list.html%>
+				<% if(Math.ceil(articleList.TotalCount/articleList.PageSize)>1){ %>
+					<%if(articleList.isHave==1){%>
+				<div class="loadMore cm_pc_12 cm_pr cm_bf cm_prl20px" style="height:80px;" >
+					<div class="loadMoreInner"  page='1' style="height:44px;line-height:44px;text-align:center;background:#f2f8ff;cursor:pointer;">
+						+加载更多
+					</div>
+				</div>
+				<%}%>
+				<% } %>
+			</li>
+		</ul>
+	</div>
+	<div id="bc_foot"><% include ../components/index_foot.html %></div>
+</div>
+<link rel="stylesheet" href="<%=site.path%>/css/apps/index01.css">
+<script src="<%=site.path%>/bundle/search.js"></script>
+<% include ../common/footer.html %>
+
+
+
+
+
+
+

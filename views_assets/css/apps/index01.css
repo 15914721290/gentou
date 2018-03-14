@@ -1,0 +1,529 @@
+.img_slide_h{
+    height:390px;
+    margin-bottom: 20px;
+    
+}
+.img_slide{
+    width:250px;
+    height:350px;
+    margin:20px 30px 20px 20px;
+}
+.img_slide2{
+    width:250px;
+    height:350px;
+    margin:0 auto;
+    margin-top: 20px!important;
+}
+
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.img_slide3 .swiper-slide img {
+    width:100%;
+    height: 100%;
+}
+
+.swiper-button-prev{
+    background: url('../../images/pics/left_02.png') center no-repeat!important;
+    left: 10px;
+    right: auto;
+}
+.swiper-button-next{
+    background: url('../../images/pics/right_02.png') center no-repeat!important;
+    right: 10px;
+    left: auto;
+}
+.swiper-button-next,.swiper-button-prev{
+    position: absolute;
+    top: 50%;
+    width: 27px;
+    height: 44px;
+    margin-top: -22px;
+    z-index: 10;
+    cursor: pointer;
+    -moz-background-size: 27px 44px;
+    -webkit-background-size: 27px 44px;
+    background-size: 27px 44px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*分页*/
+.commonPage{
+    height: 6em!important;
+}
+.commonPageInner{
+    margin-top: 20px!important;
+}
+.commonPage .pageItem{
+    height:1.6em !important;
+    line-height: 1.5em;
+}
+
+
+@media (max-width:768px){
+    /*轮播*/
+    .img_slide_h{
+        float: none;
+        height:auto;
+    }
+    .img_slide{
+        width:100%;
+        height: 296px;
+        margin:auto;
+        padding: 20px 0;
+    }
+    .img_slide .swiper-wrapper{
+        height: 256px!important;
+        overflow-y: hidden;
+    }
+   /*首页头条*/
+    .toutiao_h{
+        height:auto;
+    }
+    .toutiaoMag .ttList li div a{
+        font-size: 14px;
+        display: block;
+        height: 37px;
+        overflow: hidden;
+
+    }
+    .toutiaoMag .mag_head{
+        font-size: 16px;
+        margin: 16px 0;
+    }
+    .toutiaoToday .todayPic .todayMag{
+        padding-left: 137px!important;
+        height:150px!important;
+
+    }
+    .toutiao_h2{
+        padding: 0 20px;
+        padding-top: 20px;
+    }
+    
+    .img_slide2{
+        width:100%;
+        margin:auto;
+        height: 296px;
+         padding: 20px 0;
+    }
+    .img_slide2 .swiper-wrapper{
+        height: 256px!important;
+    }
+    .swiper-slide img{
+        width: 181px;;
+        height: 254px;
+    }
+    .swiper-slide>div{
+        width: 250px;
+    }
+    .swiper-slide span{
+        width: 181px;
+        bottom: 42px;
+        position: absolute!important;
+        left: 50%;
+        margin-left: -90px;
+    }
+    .swiper-button-next{
+        background: url('../../images/pics/zuo_01.png') no-repeat!important;
+        background-size: 100%!important;
+
+    }
+    .swiper-button-prev{
+        background: url('../../images/pics/you_01.png') no-repeat!important;
+        background-size: 100%!important;
+    }
+    .index_pagination{
+        position: absolute;
+        width: 181px;
+        height: 30px;
+        bottom: 22px;
+        left: 50%;
+        margin-left: -91px;
+        text-align: center;
+    }
+    .index_pagination span{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #ddd;
+        margin: 0 5px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -o-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+    }
+    .index_pagination  span.swiper-active-switch{
+        background: #cea770;
+    }
+}
+
+
+
+
+.pc_show{
+    display: block;
+}
+.pc_hide{
+    display: none;
+}
+.hlh11{
+	height: 1.1em;
+	line-height: 1.1em;
+}
+@media screen and (max-width: 768px){
+   
+   
+    
+    
+    /*分页*/
+    .commonPage{
+        height: 4em!important;
+    }
+    .commonPageInner{
+        margin-top: 10px!important;
+    }
+    .commonPage .pageItem{
+        height:1.6em !important;
+        line-height: 1.5em;
+    }
+    /*一周排行*/
+   
+    .weekRankTitle{
+        position: relative;
+        padding-left: 5px;
+    }
+    .weekRankTitle::after{
+        content: '';
+        display: block;
+        width: 5em;
+        height:3px;
+        position:absolute;
+        bottom: 0;
+        left:0;
+        background:#cea770;
+    }
+    /*两性健康*/
+    .lxHealth{
+        padding:0 4% !important;
+    }
+
+
+    .whiteBackground{
+        background: #ffffff !important;
+    }
+    .grayBackground{
+        background: #f6f6f6;
+    }
+    .mobile_show{
+        display: block !important;
+    }
+    .mobile_hide{
+        display: none !important;
+    }
+    .m_m_b_e{
+        margin-bottom: 1.25em;
+    }
+    .noBorder{
+        border:none !important;
+    }
+
+
+    /*一周排行*/
+    .weekRank{
+        margin-bottom: 0 !important;
+    }
+    .weekRankTitle{
+        position: relative;
+        padding-left: 5px;
+    }
+    .weekRankTitle::after{
+        content: '';
+        display: block;
+        width: 5em;
+        height:3px;
+        position:absolute;
+        bottom: 0;
+        left:0;
+        background:#cea770;
+    }
+
+    /*底部友情链接*/
+    .m_friend{
+        background: #ffffff !important;
+    }
+    .m_friend .m_friend_tab{
+        background: #f8effa;
+        padding:0 !important;
+    }
+    .m_friend .m_friend_tab>div{
+        margin:0 !important;
+        height:100% !important;
+        border:none !important;
+        -webkit-border-radius: 0 !important;
+        -moz-border-radius: 0 !important;
+        border-radius: 0 !important;
+        color:#000 !important;
+        padding:0 1em !important;
+    }
+    .m_friend .m_friend_tab .cm_c1c{
+        color:#ffffff !important;
+        background: #cea770;
+    }
+    .m_friend .m_friend_con{
+        padding-top: 0.8em !important;
+    }
+    .m_friend .m_friend_con .cm_pc_6f{
+        padding:0 !important;
+        width:33.33% !important;
+        height:2em !important;
+        line-height: 2em !important;
+        overflow: hidden !important;
+        text-align: center;
+        font-size:0.8em !important;
+    }
+    .m_friend .m_friend_con .cm_cf{
+        color: #666666 !important;
+    }
+    /*频道页*/
+    .m_friend .m_friend_con .m_friend_con_inner>span{
+        padding:0 !important;
+        width:33.33% !important;
+        height:2em !important;
+        line-height: 2em !important;
+        overflow: hidden !important;
+        text-align: center;
+        font-size:0.8em !important;
+    }
+    /*移动版导航栏更多和收起*/
+    .upCon .navMore{
+        float: right;
+    }
+    .upCon .navMore:hover,
+    .downCon .slideUp:hover{
+        background: #cea770 !important;
+        color:#fff !important;
+    }
+    .downCon{
+        position: relative;
+    }
+    .downCon .slideUp{
+        position: absolute;
+        top:0;
+        right: 0;
+    }
+}
+
+
+
+.pc_show{
+    display: block;
+}
+.pc_hide{
+    display: none;
+}
+@media screen and (max-width: 768px){
+    .whiteBackground{
+        background: #ffffff !important;
+    }
+    .grayBackground{
+        background: #f6f6f6;
+    }
+    .mobile_show{
+        display: block !important;
+    }
+    .mobile_hide{
+        display: none !important;
+    }
+    .m_m_b_e{
+        margin-bottom: 1.25em;
+    }
+    .noBorder{
+        border:none !important;
+    }
+    .noPadding{
+        padding:0 0 0 0 !important;
+    }
+    .noFloat{
+        float: none;
+    }
+
+
+    /*一周排行*/
+    .weekRank{
+        margin-bottom: 0 !important;
+    }
+    .weekRankTitle{
+        position: relative;
+        padding-left: 5px;
+    }
+    .weekRankTitle::after{
+        content: '';
+        display: block;
+        width: 5em;
+        height:3px;
+        position:absolute;
+        bottom: 0;
+        left:0;
+        background:#cea770;
+    }
+
+    /*底部友情链接*/
+    .m_friend{
+        background: #ffffff !important;
+    }
+    .m_friend .m_friend_tab{
+        background: #f8effa;
+        padding:0 !important;
+    }
+    .m_friend .m_friend_tab>div{
+        margin:0 !important;
+        height:100% !important;
+        border:none !important;
+        -webkit-border-radius: 0 !important;
+        -moz-border-radius: 0 !important;
+        border-radius: 0 !important;
+        color:#000 !important;
+        padding:0 1em !important;
+    }
+    .m_friend .m_friend_tab .cm_c1c{
+        color:#ffffff !important;
+        background: #cea770;
+    }
+    .m_friend .m_friend_con{
+        padding-top: 0.8em !important;
+    }
+    .m_friend .m_friend_con .cm_pc_6f{
+        padding:0 !important;
+        width:33.33% !important;
+        height:2em !important;
+        line-height: 2em !important;
+        overflow: hidden !important;
+        text-align: center;
+        font-size:0.8em !important;
+    }
+    .m_friend .m_friend_con .cm_cf{
+        color: #666666 !important;
+    }
+    /*频道页*/
+    .m_friend .m_friend_con .m_friend_con_inner>span{
+        padding:0 !important;
+        width:33.33% !important;
+        height:2em !important;
+        line-height: 2em !important;
+        overflow: hidden !important;
+        text-align: center;
+        font-size:0.8em !important;
+    }
+
+    .index_pagination .swiper-active-switch{
+        background: #cea770;
+    }
+   
+    /*频道右边轮播图*/
+    .channel_right_swiper{
+        /*margin-bottom: 0 !important;*/
+    }
+    .channel_right_swiper .img_slide2{
+        height: 28em !important;
+    }
+    .channel_right_swiper .swiper-slide{
+        margin-top: -1.5em;
+    }
+    .channel_right_swiper .swiper-slide img{
+        height: 40% !important;
+    }
+    .channel_right_swiper .index_pagination{
+        bottom: 2em !important;
+    }
+    /*列表*/
+    .cm_bb3c1{
+        border:none !important;
+    }
+    .cm_mtb1{
+        margin:0 !important;
+        padding:1em 0 !important;
+    }
+    .topImg{
+        top:1em !important;
+    }
+    .addPadding{
+        margin:0 !important;
+        padding: 0.5em 0 0.5em 1.2em !important
+    }
+    .articlePadding{
+        padding:0 4% !important;
+    }
+    .cm_fs15{
+        font-size: 1em;
+        font-weight: 700;
+    }
+    .articlePadding>li{
+        border-bottom:1px dashed #eeeeee !important;
+    }
+    .scaleImg{
+        width:7em !important;
+        height:4.25em !important;
+    }
+    .cm_pl12 {
+        padding-left: 8em !important;
+    }
+    .smallSize{
+        font-size: 0.95em !important;
+        max-height: 2.4em !important;
+        overflow: hidden;
+    }
+    .listNewHeight{
+        max-height:6.5em !important;
+    }
+    .noMarginLeft{
+        margin-left: 0 !important;
+    }
+    /*移动端热门关注*/
+    .host_swiper_container .swiper-slide{
+        float: left;
+    }
+     .host_swiper_container .swiper-button-prev,
+    .host_swiper_container .swiper-button-next{
+        width: 30px;
+        height: 35px;
+        position: absolute;
+        top:50px;
+    }
+    .host_swiper_container .swiper-button-prev{
+        background: url('./../../images/pics/left_01.png') no-repeat center!important;
+    }
+    .host_swiper_container .swiper-button-next{
+        background: url('./../../images/pics/right_01.png') no-repeat center!important;
+    }
+    .friend_ul{
+            background:#fff;
+        }
+    
+  
+
+
+
+    
+}
+
+
+
+

@@ -1,0 +1,20 @@
+<ul class="cm_pc_12 cm_bf cm_mb20px right_ts_main lxHealth cm_pc">
+        <li class="cm_pc_12 cm_prl20px ">
+            <div class="cm_pc_12 cm_hl205 cm_bb1ce">
+                <h2 class="cm_c1c">两性健康</h2>
+            </div>
+            <div class="cm_pa cm_tr0 cm_pr20px cm_hl205">
+                <!--<span class="cm_c7c cm_fs09">更多</span>-->
+            </div>
+        </li>
+        <li class="cm_pc_12 cm_minh8 cm_prl20px right_ts_list">
+             <ul class="cm_pc_12 cm_lh2">
+                 <% for(k in indexList.types32){ %>
+                     <% var item = indexList.types32[k] %>
+                     <li class="cm_pc_12 cm_pr cm_lh2" style="height:33px;overflow:hidden;">
+                         <a href="<% if(item.Url){ %><%= item.Url %><% }else{ %><%=site.path%>/a/<%=moment(item.EditDate).format('YYYYMMDD')%><%=item.Id%>.html<% } %>" title="<%= item.Title %>" target="_blank"><span class="cm_fs09"><%= item.Title %></span></a>
+                     </li>
+                 <% } %>
+            </ul>
+        </li>
+    </ul>

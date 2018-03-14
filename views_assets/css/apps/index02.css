@@ -1,0 +1,18 @@
+.cm_pc_120{
+    position:relative;
+    float:left;
+    width:120px;
+}
+.cm_pc_menu{
+    position:relative;
+    float:right;
+    width:840px;
+}
+@media screen and (max-width: 768px){
+    .cm_pc_120{
+        width:25%;
+    }
+    .cm_pc_menu{
+        width:100%;
+    }
+}

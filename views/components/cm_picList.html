@@ -1,0 +1,25 @@
+
+<link rel="stylesheet" type="text/css" href="<%=site.path%>/css/apps/cm_picList.css"/>
+
+<div class='picList'>
+    <div class='pic_listTop'>
+        <h1 class=" pch"><%= picArticles.listTitle %></h1>
+        <h1 class=" mobh"><%= picArticles.listTitle02 %></h1>
+    </div>
+    <div class='pic_listBody'>
+        <ul class='pic_listUl'>
+           <% for(i in picArticles.Records){ %>
+                <% if(picArticles.Records[i].Type==5){ %>
+                    <li class='pic_listLi cm_pc_3 cm_mob_6'>
+                        <a href="<%=site.path%>/pics/<%= picArticles.Records[i].Id %>.html"  class='pic_imglink scaleImg' target="_blank">
+                            <img class="lazy scaleTarget" data-original="<%= picArticles.Records[i].Thumbnail %>" alt="<%= picArticles.Records[i].Title  %>">
+                        </a>
+                        <span class='pic_txtlink'>
+                            <a style="display: inline" href="<%=site.path%>/pics/<%= picArticles.Records[i].Id %>.html" target="_blank"><%= picArticles.Records[i].Title %></a>
+                        </span>
+                    </li>
+                <% } %>
+           <% } %>
+        </ul>
+    </div>
+</div>

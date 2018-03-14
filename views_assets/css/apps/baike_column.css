@@ -1,0 +1,4 @@
+/*去掉更多*/
+.encyclopediasContent .encyclopediasLi h2 a{
+    display: none;
+}

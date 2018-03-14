@@ -1,0 +1,70 @@
+<div class="common-knowledge-wrapper cm_pc">
+    <div class="common-knowledge onlyTitle">
+        <div class="knowledge-title">
+            <h2 class="h2">两性心理</h2>
+        </div>
+        <div class="knowledge-tab">
+            <div class="knowledge-tab-wrap">
+                   <% for(var i=0;i<channelArr.length;i++){  %>
+                         <span  >
+                            <a href="<%=site.path%>/<%= channelArr[i].Alias %>/" target="_blank"><%= channelArr[i].Name %></a>
+                        </span>
+                    <% } %>
+            </div>
+            <!--<span class="more">更多</span>-->
+        </div>
+        <div class="knowledge-con-wrap onlyTitle">
+         
+
+           <% for(j in channelArr){  %>
+                        <div class="con-inner hide"> 
+                            <ul class="knowledge-con">
+                        <% var articles= channerlArticle.filter(x=>x.CategoryId==channelArr[j].AggregateId); for(k in articles){ %>
+
+                                <li class="item">
+                                    <div class="left scaleImg">
+                                        <a href="<%=site.path%>/a/<%=moment(articles[k].EditDate).format('YYYYMMDD')%><%=articles[k].Id%>.html" target="_blank">
+                                            <img class="lazy" data-original="<%= articles[k].Thumbnail %>" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="right">
+                                        <strong>
+                                            <a href="<%=site.path%>/a/<%=moment(articles[k].EditDate).format('YYYYMMDD')%><%=articles[k].Id%>.html" target="_blank"><%= articles[k].Title %></a>
+                                        </strong>
+                                        <p class="detail">
+                                            <%= articles[k].Description %>
+                                        </p>
+                                        <div class="bottom">
+                                            <span class="time"><%= articles[k].PublishDate  %></span>
+                                            <span class="class">
+                                                分类:
+                                                <% for(v in articles[k].Keywords ){ %>
+                                                <a href="<%=site.path%>/k/<%= articles[k].Keywords[v].Alias %>/" target="_blank"><%= articles[k].Keywords[v].Name %></a>,
+                                                <% } %>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                        <% } %>
+
+                            </ul>
+                            <% var articles= channerlArticle.filter(x=>x.CategoryId==channelArr[j].AggregateId);  %>
+                            <% if(articles.length>=9){ %>
+                            <div class="loadMore">
+                                <div class="loadMoreInner" flag='<%= channelArr[j].AggregateId %>' page='<%= 1 %>' >
+                                    +加载更多
+                                </div>
+                            </div>
+                            <% } %>
+                            
+                        </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="<%=site.path%>/css/apps/cm_knowledge.css"/>
+

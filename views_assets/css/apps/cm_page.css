@@ -1,0 +1,82 @@
+  #cm_page{
+            overflow:hidden;
+        }
+        #cm_page .box{
+            height: 140px;
+            background-color: #fff;
+         }
+        .ui-pagination-container {
+        height: 34px;
+        line-height: 34px;
+        }
+
+        .ui-pagination-container .ui-pagination-page-item {
+        
+        font-size: 16px;
+        padding: 4px 10px;
+        background: #fff;
+        border: 1px solid #c5b7b7;
+        color: #888;
+        margin: 0 3px;
+        text-decoration: none;
+        }
+
+        .ui-pagination-container .ui-pagination-page-item:hover {
+        border-color: #cea770;
+        color: #cea770;
+        text-decoration: none;
+        }
+
+        .ui-pagination-container .ui-pagination-page-item.active {
+        background: #cea770;
+        border-color: #cea770;
+        color: #fff;
+        cursor: default;
+        }
+    
+        button {
+            display: inline-block;
+            padding: 6px 12px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            border-color: #28a4c9;
+            color: #fff;
+            background-color: #5bc0de;
+            margin: 20px 20px 0 0;
+        }
+        
+        .box {
+            /*height: 34px;*/
+            text-align: center;
+        }
+        
+        .page {
+            
+        }
+        
+        .info {
+            width: 200px;
+            height: 34px;
+            line-height: 34px;
+        }
+        
+        .fl {
+            /*float: left;*/
+            display: inline-block;
+            padding: 40px 0;
+        }
+
+
+        @media (max-width:768px){
+            
+            .ui-pagination-container .ui-pagination-page-item{
+                font-size: 12px;
+            }
+
+            
+        }

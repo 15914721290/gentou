@@ -1,0 +1,62 @@
+<% var thisBody=channelBody.filter(x=>x.CategoryId==channels[i1].AggregateId);%>
+<div class="cm_pc_12 cm_oh cm_hl3">
+    <ul class="cm_pc_12 cm_tc">
+    <% if(thisBody.length>0){%>
+        <% var right2Column=thisBody[0].Data.filter(x=>x.Position.RecommendType==22);
+            if(right2Column.length>0){
+                right2Column=right2Column[0].Position.RelatedId;
+                var right2Column2=childrenList.filter(x=>x.ParentId==channels[i1].AggregateId);
+                right2Column=right2Column2.filter(x=>x.AggregateId==right2Column);
+                if(right2Column.length>0){%>
+                    <li class="cm_fl cm_hl3 cm_prl05 cm_bb1c1 right2Column"><a class="cm_c1c cm_fwb"  href="<%=site.path%>/<%=channels[i1].Alias%>/<%=right2Column[0].Alias%>/" title="<%=right2Column[0].Name%>" target="_blank"><%=right2Column[0].Name%></a></li>
+        <% }}%>
+        <%  var right2Right=thisBody[0].Data.filter(x=>x.Position.RecommendType==23);
+            if(right2Right.length>0){
+                right2Right=right2Right[0].Content;
+                for(i7 in right2Right){%>
+                    <li class="cm_fl cm_hl3 cm_ml02 cm_bb1ce right2Right" style="max-width:80px;"><a class="cm_c4c" style="font-size:14px;" href="<%if(right2Right[i7].Url){%><%=right2Right[i7].Url%><%}else{%><%=site.path%>/a/<%=moment(right2Right[i7].EditDate).format('YYYYMMDD')%><%=right2Right[i7].Id%>.html<%}%>" title="<%=right2Right[i7].Title%>" target="_blank"><%=right2Right[i7].Title%></a></li>
+        <%}}%>	
+    <%}%>
+   </ul>
+</div>
+  <div class="cm_pc_12 cm_c5c cm_mt2 cm_mb1">
+      <div class="cm_pa cm_tl0 cm_z2 cm_w705 cm_h6 cm_tc ImgSpage">
+            <% if(thisBody.length>0){%>
+                <% var right2Image=thisBody[0].Data.filter(x=>x.Position.RecommendType==25);
+                    if(right2Image.length>0){
+                        right2Image=right2Image[0].Content;
+                        if(right2Image.length>0){%>
+                            <div class="cm_wh100 ">
+                                <a class="" href="<%if(right2Image[0].Url){%><%=right2Image[0].Url%><%}else{%><%=site.path%>/a/<%=moment(right2Image[0].EditDate).format('YYYYMMDD')%><%=right2Image[0].Id%>.html<%}%>" title="<%=right2Image[0].Title%>" target="_blank"><img class="cm_wh100 cm_bs100 lazy" data-original="<%=right2Image[0].Thumbnail%>"/></a>
+                            </div>
+                            <a class="" href="<%if(right2Image[0].Url){%><%=right2Image[0].Url%><%}else{%><%=site.path%>/a/<%=moment(right2Image[0].EditDate).format('YYYYMMDD')%><%=right2Image[0].Id%>.html<%}%>" title="<%=right2Image[0].Title%>" target="_blank"><span style="display:none;" class="cm_pa cm_bl0 cm_z2 cm_o08 cm_w100 cm_hl2 cm_bk02 cm_cf"><%=right2Image[0].Title%></span></a>
+                        <%}else{%>
+                            <div class="cm_wh100 ">
+                                <img class="cm_wh100 cm_bs100 lazy" data-original="<%=site.path%>/images/noImg/10.png"/>
+                            </div>
+                <% }}%>
+            <%}%>
+      </div>
+      <ul class="cm_pc_12 cm_pl8 cm_pr0 cm_minh6">
+            <% if(thisBody.length>0){%>
+                <% var right2Article=thisBody[0].Data.filter(x=>x.Position.RecommendType==24);
+                    if(right2Article.length>0){
+                        right2Article=right2Article[0].Content;
+                        for(i8 in right2Article){
+                            if(i8<4){%>
+                            <li class="cm_pc_12 cm_oh cm_mb05 hlh11 <%if(i8==0){%>cm_mt02<%}%> right2Article"><a class="<%if(i8==0){%>cm_c7c<%}else{%>cm_fs09 cm_c5c<%}%> cm_fwb" href="<%if(right2Article[i8].Url){%><%=right2Article[i8].Url%><%}else{%><%=site.path%>/a/<%=moment(right2Article[i8].EditDate).format('YYYYMMDD')%><%=right2Article[i8].Id%>.html<%}%>" title="<%=right2Article[i8].Title%>" target="_blank"><%=right2Article[i8].Title%></a></li>
+                <% }}}%>
+            <%}%>								
+      </ul>
+  </div>
+  <ul class="cm_pc_12 cm_lh2 cm_c7c cm_mb205" style="min-height: 111px;">
+        <% if(thisBody.length>0){%>
+            <% var right2Article2=thisBody[0].Data.filter(x=>x.Position.RecommendType==24);
+                if(right2Article2.length>0){
+                    right2Article2=right2Article2[0].Content;
+                    for(i9 in right2Article2){
+                        if(i9>=4&&i9<7){%>
+                        <li class="cm_pc_12 right2Article2" style="height:37px;overflow:hidden;">. <a class="cm_c7c" href="<%if(right2Article2[i9].Url){%><%=right2Article2[i9].Url%><%}else{%><%=site.path%>/a/<%=moment(right2Article2[i9].EditDate).format('YYYYMMDD')%><%=right2Article2[i9].Id%>.html<%}%>" title="<%=right2Article2[i9].Title%>" target="_blank"><%=right2Article2[i9].Title%></a></li>
+            <% }}}%>
+        <%}%>
+  </ul>

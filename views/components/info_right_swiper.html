@@ -1,0 +1,33 @@
+<div class="cm_pc_12 cm_pr cm_bf img_slide_h right_swiper">
+       <!-- Swiper -->
+    <div class="swiper-container index_img_slide img_slide2 cm_pr">					
+        <div class="swiper-wrapper cm_wh100">
+            <% for(k in indexList.types3){ %>
+                <% var item = indexList.types3[k] %>
+                <div class="swiper-slide cm_wh100">
+                    <div class="cm_pr"  style="width:100%;height:100%;">
+                        <a href="<% if(item.Url){ %><%= item.Url %><% }else{ %><%=site.path%>/a/<%=moment(item.EditDate).format('YYYYMMDD')%><%=item.Id%>.html<% } %>"  target="_blank">
+                            <img class="cm_wh100 cm_bs100" src="<%= item.Thumbnail %>"/>
+                            <span class="cm_pa cm_bl0 cm_z2 cm_o08 cm_w100 cm_hl2 cm_bk02 cm_cf cm_pc"><%= item.Title %></span>
+                        </a>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+        <div class="index_pagination cm_mob"></div>
+        <div class="swiper-button-next " style="display:none;"></div>
+        <div class="swiper-button-prev" style="display:none;"></div>
+
+
+        <div class="swiper-button-next cm_mob" ></div>
+        <div class="swiper-button-prev cm_mob" ></div>
+    </div>
+    
+</div>
+<link rel="stylesheet" href="<%=site.path%>/js/jqplugin/idangerous.swiper.min.css">
+
+
+
+
+
+

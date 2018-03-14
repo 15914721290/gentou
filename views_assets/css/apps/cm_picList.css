@@ -1,0 +1,84 @@
+ .picList{
+        padding: 0 20px 10px 20px;
+        background-color: #fff;
+    }
+    .picList .pic_listTop{
+        width: 100%;
+        height: 50px;
+        border-bottom:1px solid #ececec;
+
+    }
+    .picList .pic_listTop .pch{
+        font-size: 18px;
+        color: #333;
+        height: 50px;
+        line-height: 50px;
+        display: inline-block;
+        border-bottom:3px solid #cea770;
+    }
+    .picList .pic_listTop .mobh{
+        display: none;
+    }
+    .picList .pic_listBody{
+        overflow: hidden;
+    }
+    .picList .pic_listBody .pic_listUl{
+        margin: 0 -10px!important;
+    }
+    .picList .pic_listBody .pic_listUl .pic_listLi{
+        margin-top: 30px;
+        padding: 0 10px;
+        height: 290px;
+    }
+    .picList .pic_listBody .pic_listUl .pic_listLi a{
+        display: block;
+        height: 207px;
+        text-align: center;
+    }
+    .picList .pic_listBody .pic_listUl .pic_listLi .pic_imglink img{
+        height: 100%;
+        width: 100%;
+    }
+    .picList .pic_listBody .pic_listUl .pic_listLi .pic_txtlink{
+        overflow: hidden;
+        margin-top: 20px;
+        text-align: left;
+        font-size: 16px;
+        color: 18px;
+        display: block;
+        max-height: 40px;
+    }
+
+    @media (max-width:768px){
+        
+        .picList{
+            padding: 0px;
+        }
+        .picList .pic_listTop .mobh{
+            margin: 0 20px;
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;    
+            border-bottom:3px solid #cea770;        
+        }
+        .picList .pic_listTop .pch{
+            display: none;
+        }
+        .picList .pic_listBody{
+            padding: 0 5px;
+        }
+        .picList .pic_listBody .pic_listUl .pic_listLi{
+            padding: 0;
+            margin-top: 16px;
+            height: auto;
+        }
+        .picList .pic_listBody .pic_listUl .pic_listLi a{
+            height: 124px!important;
+            width: 135px!important;
+            margin: 0 auto;
+        }
+        .picList .pic_listBody .pic_listUl .pic_listLi .pic_txtlink{
+            max-height: 34px;
+            font-size: 13px;
+        }
+    }

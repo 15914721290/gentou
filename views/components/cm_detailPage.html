@@ -1,0 +1,59 @@
+<div class="commonDetailPage">
+    <div class="detailPageHead">
+        <h1 class="detailPageh1"><%= information.Title %></h1>
+        <p class="detailPagep">
+            <span>发布：</span>
+            <span><%= information.EditDate %></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span>整理：</span>
+            <span><%= information.Origin %></span>
+        </p>
+    </div>
+    <div class="detailPageBody">
+        <!--<img class="detailImg lazy" data-original=<%= children.Thumbnail %> alt="">-->
+        <% if(information.Type==0){ %>
+          <%- information.Content %>
+        <% } %>
+       <p class="share">
+            <span >欢迎分享给朋友： </span>
+            <span class="bdsharebuttonbox">
+                <a href="#" class="bds_more" data-cmd="more"></a>
+                <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                <a href="#" class="bds_bdysc" data-cmd="bdysc" title="分享到百度云收藏"></a>
+            </span>
+       </p>
+        <div class="detailBox">
+            <h3 class="detailBoxTip">其他网友正在关注</h3>
+            <div class="detailBoxBody">
+                <div class="boxLeft">
+                    <div>
+                        <div >下载【复金乐投】APP 即可领取10元现金券！</div>
+                        <div >最好玩的赚钱APP，赢现金，买对方向就能赚</div>
+                        <div class="cm_pc">提现实时到账，10元就能玩哦~</div>
+                    </div>
+                    <div class="cm_pc">
+                        <div>手机扫描二维码，关注微信公众号</div>
+                        <div>（微信号：fuletou）</div>
+                    </div>
+                </div>
+                <div class="boxRight">
+                    <img class="lazy" data-original="/images/pics/erweima.png" alt="二维码">
+                    <p>关注微信公众号
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="detailFoot">
+
+            <% for(var i=0; i<information.Keywords.length;i++){ %>
+                 <a href="<%=site.path%>/k/<%= information.Keywords[i].Alias %>/" target="_blank"><h3><%= information.Keywords[i].Name %></h3></a>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="<%=site.path%>/css/apps/cm_detailPage.css"/>
+
+

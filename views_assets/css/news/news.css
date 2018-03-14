@@ -1,0 +1,36 @@
+.fl_pl18 {
+    padding-left: 18em !important
+}
+
+.clearfix:after {
+    clear: both;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.fl_w200 {
+    width: 200%
+}
+
+.fl_w80 {
+    width: 80%
+}
+
+.fl_w50 {
+    width: 50%
+}
+
+.fl_w48 {
+    width: 48%
+}
+
+.fl_fr {
+    float: right !important
+}
+
+.fl_hide {
+    display: none;
+}

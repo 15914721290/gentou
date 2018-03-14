@@ -1,0 +1,24 @@
+
+<div class='updatesMain ' >
+<div class='updatesHead'>
+    <h2>最近更新</h2>
+</div>
+<div class='updatesBody'>
+    <ul>
+        <% for(i in newArticle){ %>
+         <li class='updatesLi cm_pc_12'>
+            <a href="<%=site.path%>/pics/<%= newArticle[i].Id %>.html" class="updateLink scaleImg" target="_blank" alt='<%= newArticle[i].Title %>'>
+                <img class="lazy" data-original="<%=newArticle[i].Thumbnail  %>" alt="">
+            </a>
+            <a href="<%=site.path%>/pics/<%= newArticle[i].Id %>.html" class='updateText scaleImg ' alt='<%= newArticle[i].Title %>'><%= newArticle[i].Title %></a>
+        </li>
+
+        <% } %>
+       
+       
+    </ul>
+</div>
+</div>
+    
+
+<link rel="stylesheet" type="text/css" href="<%=site.path%>/css/apps/cm_recentUpdates.css"/>

@@ -1,0 +1,30 @@
+<% include ../common/header.html %>
+<div class="cm_main2 cm_row">
+    <div id="bc_head" class="cm_row">
+        <% include ../components/index_head02.html %>
+    </div>
+    <div class="cm_main">
+        <!--图片列表-->
+        <div class="cm_row">
+
+            <% include ../components/cm_picList.html %>
+            <!--分页-->
+            <% include ../components/info_page.html%>
+
+        </div>
+    </div>
+    <% include ../components/index_hot.html%>
+    <div id="bc_foot">
+        <% include ../components/index_foot.html %>
+    </div>
+    
+    
+</div>
+<link rel="stylesheet" href="<%=site.path%>/css/apps/index01.css">
+
+<script src="<%=site.path%>/bundle/img_index.js"></script>
+<% include ../common/footer.html %>
+
+
+
+

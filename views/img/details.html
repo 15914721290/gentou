@@ -1,0 +1,67 @@
+<% include ../common/header.html %>
+
+<!--PC端-->
+<div class="cm_main2 cm_pc ">
+    <div id="bc_head" class="cm_row">
+        <% include ../components/index_head02.html %>
+    </div>
+    
+    <!--PC端-->
+    <div class="cm_main  ">
+        <!--轮播图-->
+        <div id="cm_slideShow" >
+            <% include ../components/cm_newSwiper.html %>
+        </div>
+        <div class=" cm_picsBottom">
+            <!--评论-->
+            <div id="cm_discuss" class="cm_pc_8 ">
+                <% include ../components/cm_discuss.html %>
+            </div>
+
+            <!--最近更新-->
+            <div id="cm_recentUpdates" class="cm_pc_4 ">
+                <% include ../components/cm_recentUpdates.html %>
+            </div>
+        </div>
+        <div style="overflow:hidden;" >
+            <% include ../components/cm_picSelect.html %>
+        </div>
+    </div>
+    <div >
+        <% include ../components/index_hot.html%>
+    </div>
+    <div id="bc_foot" >
+        <% include ../components/index_foot.html %>
+    </div>
+</div>
+
+
+<!--移动端-->
+    <div id="cm_modSwiper" class="cm_mob">
+        <% include ../components/cm_mobSwiper.html%>
+
+    </div>
+<!--<link rel="stylesheet" href="<%=site.path%>/css/apps/cm_newSwiper.css">-->
+<link rel="stylesheet" href="<%=site.path%>/css/apps/img_details.css">
+
+<script src="<%=site.path%>/bundle/img_details.js"></script>
+<% include ../common/footer.html %>
+
+
+<script>
+    console.log($('.mob_swiper .swiper-slide img').width())
+    $('.mob_swiper .swiper-slide img').resize (function(){
+        console.log(11);
+    })
+  
+
+</script>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+<ul class="cm_pc_12 cm_bf cm_mb20px right_ts_main" id="jingcaituku">
+        <li class="cm_pc_12 cm_prl20px cm_mb05">
+            <div class="cm_pc_12 cm_hl205 cm_bb1ce">
+                <h2 class="cm_c1c">精彩图片</h2>
+            </div>
+          
+        </li>
+        <li class="cm_pc_12 cm_minh8 cm_tc right_ts_list">
+            <ul class="cm_pc_12 cm_pr20px cm_lh2 ">
+                <% for(var k=0;k<4;k++){ %>
+                    <li class="cm_pc_6 cm_mb1" style="padding:0 20px;">
+                        
+                            <div class="cm_pc_12  info_pics">
+                                <div class="cm_w100 cm_h8 info_pics_pic scaleImg">
+                                    <a href="" target="_blank" title="">
+                                    <img class="cm_wh100 cm_bs100 lazy " data-original=""/>
+                                    </a>
+                                </div>
+                                <div class="cm_pa cm_bl0 cm_z2 cm_w100  cm_hl2">
+                                    <a href  target="_blank" title="">
+                                    <span class="cm_pc_12 cm_o08 cm_fs08 cm_bk02 cm_cf" style="height:32px;line-height:32px;overflow:hidden;"></span>
+                                    </a>
+                                </div>
+                            </div>
+                    </li>
+                <% } %>
+             </ul>
+             
+        </li>
+    </ul>
+
+
+    <style>
+         @media screen and (max-width: 768px){
+             .info_pics{
+              
+                 height: 155px;
+                 margin: 0 auto;
+             }
+            .scaleImg.info_pics_pic{
+                height: 112px!important;
+                margin: 0 auto;
+            }
+            .info_pics span{
+                background: none!important;
+                color: #000!important;
+                max-height: 40px;
+                line-height: 20px;
+                overflow: hidden;
+            }
+         }
+    
+    </style>

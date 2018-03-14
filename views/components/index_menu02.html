@@ -1,0 +1,64 @@
+<style>
+    @media screen and (max-width: 678px) {
+        /* .index_menu_scroll{
+                height: 3em !important;
+                overflow-x: scroll !important;
+                overflow-y: hidden !important;
+                white-space: nowrap !important;
+            }
+            .index_menu_scroll a{
+                display: inline-block;
+                margin-right: -5px;
+            } */
+    }
+</style>
+<div class="cm_main2 cm_pc_12 cm_lh3 cm_c1b cm_cf cm_tc">
+    <div class="cm_main">
+        <ul class="cm_pc_12">
+            <li class="cm_pa cm_l0 cm_mt05f cm_z999 cm_pc">
+                <img class="cm_bs100" src="/images/index/logo.png" width="152" height="132">
+            </li>
+            <li class="cm_pc_menu cm_afc index_menu_scroll">
+                <%for(i in menu){%>
+                    <a href="<%=menu[i].url%>" class="cm_hvfc" title="<%=menu[i].Name%>" target="">
+                        <span class="cm_pc_120 cm_hvc2b <%if(menuid==menu[i].url){%>cm_c2b<%}%>" mid="<%=i%>">
+                            <span class="">
+                                <%=menu[i].Name%>
+                            </span>
+                            <%if(i==1||i==2){%>
+                                <img class="cm_mtb1 cm_wh1 cm_bs100 cm_pc_i" src="/images/index/arrow_down_white.png">
+                                <%}%>
+                        </span>
+                    </a>
+                    <%}%>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="cm_main2 cm_pc_12 cm_lh3 cm_tc cm_pc">
+    <div class="cm_main">
+        <div class="cm_pc_12">
+            <div class="cm_pa cm_tr0 cm_z999">
+                <ul class="cm_pc_menu" id="cm_pop_menu">
+                    <%for(i in menu){%>
+                        <li class="cm_pc_120">
+                            <%if(i==1||i==2){%>
+                                <ul class="cm_pc_12 cm_bf cm_bl1ce cm_br1ce cm_bb1ce cm_dn">
+                                    <%for(var i2=0;i2<4;i2++){%>
+                                        <li class="cm_pc_12 cm_hl3 cm_bb1ce">资讯
+                                            <%=i2%>
+                                        </li>
+                                        <%}%>
+                                </ul>
+                                <span class="">&nbsp;</span>
+                                <%}else{%>
+                                    <span>&nbsp;</span>
+                                    <%}%>
+                        </li>
+                        <%}%>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="<%=site.path%>/css/apps/index02.css">

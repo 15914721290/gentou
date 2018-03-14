@@ -1,0 +1,86 @@
+<style>
+    .host_swiper_container .swiper-slide{
+        float: left;
+    }
+     .host_swiper_container .swiper-button-prev,
+    .host_swiper_container .swiper-button-next{
+        width: 30px;
+        height: 35px;
+        position: absolute;
+        top:50px;
+    }
+    .host_swiper_container .swiper-button-prev{
+        background: url('./../../images/pics/left_01.png') no-repeat center!important;
+    }
+    .host_swiper_container .swiper-button-next{
+        background: url('./../../images/pics/right_01.png') no-repeat center!important;
+    }
+    
+    @media screen and (max-width: 678px){
+        .friend_ul{
+            background:#fff;
+        }
+    }
+</style>
+
+<div class="cm_main2 cm_c3b cm_cf cm_afc m_friend">
+    <div class="cm_main cm_bb1c5 m_friend_inner" style="overflow:hidden;">
+        <ul class="cm_row friend_ul" >
+            <li class="cm_pc_12  cm_prl20px cm_pr cm_h3 cm_mt1 m_friend_tab" id="foot_friend">
+                <div class="cm_fl cm_fc4 cm_hl2 cm_prl05 cm_br02 cm_mt05 cm_b1c1 cm_c1c">
+                    <span class="cm_fs09">热门关注</span>
+                </div>
+            </li>
+            <li class="cm_pc_12  cm_pr cm_minh8 m_friend_con" style="padding:20px 0;" id="foot_friend_list">
+                <div class="cm_pc_12  cm_pr cm_lh2 cm_wb_b m_friend_con_inner">
+                    <!--PC端-->
+                     <div class="cm_pc">
+                        <%  var types53=indexList.types53;
+                            var newTypes53=[];
+                            for(var i5=0,len=types53.length;i5<len;i5+=12){
+                                newTypes53.push(types53.slice(i5,i5+12));
+                            }
+                            for(i53 in newTypes53){%>
+                        <ul class="cm_pc_12 cm_lh2 cm_pc m_friend_con_inner">
+                             <% var newTypes5302=newTypes53[i53];
+                                    for(i54 in newTypes5302){%>
+                                <li class="cm_pc_6f cm_pl20px" style="height:32px;overflow:hidden;">
+                                    <a class="cm_cf m_friend_con_link"  href="<%if(newTypes5302[i54].Url){%><%=newTypes5302[i54].Url%><%}else{%><%=site.path%>/a/<%=moment(newTypes5302[i54].EditDate).format('YYYYMMDD')%><%=newTypes5302[i54].Id%>.html<%}%>" title="<%=newTypes5302[i54].Title%>" target="_blank"><%=newTypes5302[i54].Title%></a>
+                                </li>
+                                 <% }%>
+                                
+                        </ul>
+                        <% }%>
+                    </div>
+                    <!--移动端轮播图-->
+                  <div class="host_swiper_container cm_mob">
+                        <div class="swiper-wrapper">
+                            <%  var types53=indexList.types53;
+                                var newTypes53=[];
+                                for(var i5=0,len=types53.length;i5<len;i5+=12){
+                                    newTypes53.push(types53.slice(i5,i5+12));
+                                }
+                                for(i53 in newTypes53){%>
+                                    <div class="swiper-slide"  >
+                                        <ul class="cm_mob_9">
+                                        <% var newTypes5302=newTypes53[i53];
+                                        for(i54 in newTypes5302){%>
+                                            <li class="cm_pc_6f cm_pl20px " style="height:32px;overflow:hidden;">
+                                                <a class="cm_cf" href="<%if(newTypes5302[i54].Url){%><%=newTypes5302[i54].Url%><%}else{%><%=site.path%>/a/<%=moment(newTypes5302[i54].EditDate).format('YYYYMMDD')%><%=newTypes5302[i54].Id%>.html<%}%>" title="<%=newTypes5302[i54].Title%>" target="_blank"><%=newTypes5302[i54].Title.substring(0,9)%></a>
+                                            </li>
+                                        <% }%>
+                                        </ul>
+                                    </div>
+                            <% }%>
+                            
+                            
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    <!--轮播图-->
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

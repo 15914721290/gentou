@@ -1,0 +1,60 @@
+<style>
+    .img_slide_h{
+        height:330px;
+    }
+    @media screen and (max-width: 768px){
+        /*轮播图*/
+        .img_slide_h{
+            float: none;
+            height:auto;
+        }
+        .img_slide{
+            width:100%;
+            height: 296px;
+            margin:auto;
+            padding: 20px 0;
+        }
+        .toutiao_h2{
+            height:auto;
+        }
+    }
+</style>
+<div class="cm_pc_9 cm_mob_12 cm_pr20pc">
+        <ul class="cm_pc_12">
+            <li class="cm_pc_5 cm_mob_12">
+                <div class="cm_pc_12 cm_bf img_slide_h">
+                    <!-- Swiper -->
+                    <div class="swiper-container index_img_slide">
+                        <div class="swiper-wrapper cm_wh100">
+                                <%for(var i6=0;i6<5;i6++){%>
+                                    <div class="swiper-slide cm_wh100">
+                                        <div class="cm_pr cm_wh100">
+                                            <a href="/" title="/" target="_blank"><img class="cm_wh100" src="/"/></a>
+                                            <a href="/" title="/" target="_blank"><span class="cm_pa cm_bl0 cm_z2 cm_o08 cm_w100 cm_bk02 cm_cf cm_pc">12345</span></a>
+                                        </div>
+                                    </div>
+                                <%}%>
+                        </div>
+                        <div class="index_pagination cm_mob"></div>
+                        <div class="swiper-button-next mobile_hide" style="display:none;"></div>
+                        <div class="swiper-button-prev mobile_hide" style="display:none;"></div>
+                        <div class="swiper-button-next cm_mob" ></div>
+                        <div class="swiper-button-prev cm_mob" ></div>
+                    </div>
+                    <div class="index_pagination pc_hide mobile_show"></div>
+                    <!-- Swiper -->
+                </div>
+                <div class="cm_pc_12">5555</div>
+            </li>
+            <li class="cm_pc_7 cm_mob_12" >
+                    <% include ../components/index_toutiao2.html %>
+            </li>
+        </ul>
+    </div>
+    <div class="cm_pc_3 cm_mob_12">
+        <ul class="cm_pc_12">
+            <li class="cm_pc_12">
+                11111
+            </li>
+        </ul>
+    </div>

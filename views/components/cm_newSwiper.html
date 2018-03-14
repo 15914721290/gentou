@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="<%=site.path%>/js/jqplugin/idangerous.swiper.min.css">
+<link rel="stylesheet" href="<%=site.path%>/css/apps/cm_newSwiper.css">
+
+<div id="wrapper">
+    <div class='topWrap '>
+        <h1><%= information.Title %></h1>
+        <div class='detailsText'>
+            <span class='span_01'><%= information.PublishDate  %></span>
+            <span class='span_02'><a href="#cm_discuss">查看评论（143人参与）</a></span>
+            <span class='span_03'>支持←  → 键翻阅图片</span>
+        </div>
+    </div>
+
+    <!--两个轮播图-->
+    <div class="pc-slide" style="padding-bottom:0;">
+			<div class="view">
+				<div class="swiper-container">
+					<a class="arrow-left" href="javascript:;"></a>
+					<a class="arrow-right" href="javascript:;"></a>
+					<div class="swiper-wrapper">
+                        <% if(information.Type==5){ %>
+                            <% if(information.Content){ %>
+                                <% for(var i=0,j=1;i<information.Content.length;i++,j++){ %>
+                            <div class="swiper-slide cm_wh100">
+                                <div class="cm_wh100 slideBox" >
+                                    <img class="cm_h100" src="<%= information.Content[i].Url %>"/>
+                                </div>
+                                <div class="slideText">
+                                    <span><i><%= j %></i>/<%=information.Content.length  %></span>&nbsp;&nbsp;
+                                    <%= information.Content[i].Description %>
+                                </div>
+                            </div>
+                            <% } %>
+                            <% } %>
+                        <% } %>
+					</div>
+				</div>
+                <div class="alert">这是最后一张</div>
+			</div>
+         
+			<div class="previewWarp">
+                <div class="cm_pc_2" style="width:193px;height:172px;">
+                      <% if(information.Previous){ %>
+                        <div class="otherLink ">
+                            <a href="<%=site.path%>/pics/<%= information.Previous.Id %>.html" class="scaleImg" title="上一组" target="_blank">
+                                <img class="lazy" data-original="<%= information.Previous.Thumbnail %>" alt="<%=information.Previous.Title  %>">
+                            </a>
+                            <p><a href="<%=site.path%>/pics/<%= information.Previous.Id %>.html"   target="_blank"><%= information.Previous.Title %></a></p>
+                        </div>
+                       <% } %>
+                        
+                </div>
+                <div class="preview cm_pc_8">
+                    <a class="arrow-left" href="#"></a>
+                    <a class="arrow-right" href="#"></a>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <% for(k in information.Content){ %>
+                            <div class="swiper-slide">
+                                <img class="" src="<%= information.Content[k].Url %>"/>
+                            </div>
+
+                            <% } %>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="cm_pc_2" style="width:193px;height:172px;">
+                   <% if(information.Next){ %>
+                    <div class="otherLink ">
+                         <a href="<%=site.path%>/pics/<%= information.Next.Id %>.html" class="scaleImg" title="下一组" target="_blank">
+                            <img class="lazy" data-original="<%= information.Next.Thumbnail %>" alt="<%=information.Next.Title  %>">
+                        </a>
+                        <p><a href="<%=site.path%>/pics/<%= information.Next.Id %>.html"   target="_blank"><%= information.Next.Title %></a></p>
+                        
+                    </div>
+                    <% } %>
+                    
+                </div>
+            </div>
+		</div>
+</div>
+
+

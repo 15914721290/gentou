@@ -1,0 +1,77 @@
+<div class="cm_mob" style="background-color:#fff;margin-bottom:20px;">
+    <div class="info_head">
+        <h2>两性健康</h2>
+        <ul>
+            <li class="active">两性心理</li>
+            <li>两性关系</li>
+        </ul>
+    </div>
+    <div class="info_body cm_row">
+        <ul class="cm_pc_12 cm_lh2" >
+                <% for(k in indexList.types32){ %>
+                    <% var item = indexList.types32[k] %>
+                    <li class="cm_pc_12 cm_pr cm_lh2">
+                        <a href="<% if(item.Url){ %><%= item.Url %><% }else{ %><%=site.path%>/a/<%=moment(item.EditDate).format('YYYYMMDD')%><%=item.Id%>.html<% } %>" title="<%= item.Title %>" target="_blank"><span class="cm_fs08"><%= item.Title %></span></a>
+                    </li>
+                <% } %>
+        </ul>
+        <ul class="cm_pc_12 cm_lh2 cm_c7c right_tsinfo hide" >
+                 <% for(k in indexList.types33){ %>
+                     <% var item = indexList.types33[k] %>
+                     <li class="cm_pc_12">
+                         <div class="cm_pc_12">
+                              <a href="<% if(item.Url){ %><%= item.Url %><% }else{ %><%=site.path%>/a/<%=moment(item.EditDate).format('YYYYMMDD')%><%=item.Id%>.html<% } %>" class="cm_fs08 "><%= item.Title %></a>
+                         </div>
+                     </li>
+                 <% } %>
+            </ul>
+         
+    </div>
+    
+</div>
+
+
+<style>
+    .info_head {
+        height: 40px;
+        padding: 0 20px;
+    }
+    .info_body{
+        padding: 0 20px;
+    }
+    .info_head h2{
+        float: left;
+        width: 50%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 15px;
+        color: #cea770 !important;
+        border-bottom: 1px solid #eeeeee !important;
+        border-right: 1px solid #eeeeee !important;
+        
+    }
+    .info_head ul{
+        width: 50%;
+        float: right;
+        height: 40px;
+    }
+    .info_head ul li{
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        width: 50%;
+        font-size: 13px;
+        text-align: center;
+        border-top: 1px solid #eeeeee !important;
+        border-right: 1px solid #eeeeee !important;
+
+    }
+    .info_head ul li.active{
+        border-bottom: 1px solid #eeeeee !important;
+        color: #cea770 !important;
+        border-top: 2px solid #cea770 !important;
+    }
+    .hide{
+        display: none;
+    }
+</style>

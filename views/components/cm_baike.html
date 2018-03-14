@@ -1,0 +1,16 @@
+<link rel="stylesheet" type="text/css" href="<%=site.path%>/css/apps/cm_baike.css"/>
+<div class="encyclopediasContent">
+    <ul class="encyclopediasUl">
+        <% for(var i=0;i<baikeList.length;i++){%>
+            <li class="encyclopediasLi m_li">
+                <h2><%= baikeList[i].Name %> <a href="<%=site.path%>/b/<%= baikeList[i].Alias %>/" target="_blank" title="更多<%= baikeList[i].Name %>">更多</a></h2>
+                <div class="encyCon">
+                    <% var articles= baikeArticles.filter(x=>x.CategoryId==baikeList[i].AggregateId) 
+                       for(var j=0; j<articles.length;j++){ %>
+                            <span class="cm_mob_5 cm_pc_2"><a href='<%=site.path%>/b/lx<%= articles[j].Id %>.html' target="_blank" title=<%= articles[j].Title %>><%= articles[j].Title.substring(0,15) %></a></span>
+                       <%}%>
+                </div>
+            </li>
+        <% }%>
+    </ul>
+</div>

@@ -1,0 +1,111 @@
+
+<% include ../common/header.html %>
+<div class="cm_main2">
+	<div id="bc_head cm_mb20px" class="cm_row">
+		<!--标签页的PC端去掉子栏目-->
+		<% include ../components/common_head.html%>
+		<% include ../components/common_banner.html%>
+		<% include ../components/common_head_logo02.html%>
+		<div class="cm_pc cm_main2 cm_pc_12 cm_lh3 cm_c1b cm_cf cm_tc">
+			<div class="cm_main">
+				<ul class="cm_pc_12">
+					<li class="cm_pc_12 cm_afc">
+						<%for(i in menu){%>
+							<a href="<%=menu[i].url%>" class="cm_hvfc" title="<%=menu[i].Name%>" target=""><span class="cm_pc_<%=menu.length%>f cm_hvc2b <%if(menuid==menu[i].Alias){%>cm_c2b<%}%>" ><%=menu[i].Name%></span></a>
+						<%}%>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="cm_pc cm_main cm_mob">
+			<ul class="cm_row">
+				<li class="cm_pc cm_pc_12 cm_prl20px cm_c6b <%if(children.length>0){%> cm_hl205<%}else{%>cm_mb20px<%}%>">
+					<%if(children.length>0){%>
+					<ul class="cm_pc_12 cm_p0 cm_pr">
+						<li class="cm_fl">
+							<span class="cm_fs08 cm_c4c"><%= thisChannel.Name %>栏目推荐:</span>
+						</li>
+						<%for(i in children){%>
+							<li class="cm_fl cm_ml05  ">
+								<a class="cm_fs08   <%if(columnid==children[i].Alias){%>cm_c1c<%}%>  " href="<%=url%>/<%=children[i].Alias%>/" title="<%=children[i].Name%>" target="_blank">
+									<%=children[i].Name%>
+								</a><%if(i<children.length-1){%><span class="cm_c4c">|</span><%}%>
+							</li>
+						<%}%>
+					</ul>
+					<%}%>
+				</li>
+			</ul>
+		</div>
+		<style>
+		.channelNav{
+			width:100%;
+			height: 3em;
+		}
+		.channelNav li{
+			height: 3em;
+			white-space: nowrap;
+			overflow-x: scroll !important;
+			overflow-y: hidden !important;
+		}
+		.channelNav li a {
+			display: inline-block;
+			width: auto;
+			}
+		</style>
+		
+		<div class="cm_mob cm_main2 cm_pc_12 cm_lh3 cm_c1b cm_cf cm_tc">
+			<div class="cm_main">
+				<ul class="cm_pc_12 channelNav">
+					<li class="cm_pc_12 cm_afc ">
+						<a class="cm_hvfc" href="<%= site.path %>/"><span class="cm_pc_9f cm_hvc2b">首页</span></a>
+						<%for(i in children){%>
+							<a class="cm_hvfc <%if(columnid==children[i].Alias){%>cm_c2b<%}%>" href="/<%=children[i].Alias%>/" title="<%=children[i].Name%>" target="_blank"><span class="cm_pc_9f cm_hvc2b"><%=children[i].Name%></span></a>
+						<%}%>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+	</div>
+	<div class="cm_main cm_c6b" style="margin-top:40px;">
+		<ul class="cm_row ">
+			<li class="cm_mob_12 cm_pc_8 cm_pr20pc">
+				<% include ../components/info_list.html%>
+				<% include ../components/info_page.html%>
+			</li>
+			<li class="cm_mob_12 cm_pc_4">
+				<% include ../components/info_right_tuijian1.html%>
+				<!--热门百科-->
+				<ul class="cm_pc_12 cm_bf cm_mb20px right_ts_main">
+					<li class="cm_pc_12 cm_prl20px">
+						<div class="cm_pc_12 cm_hl205 cm_bb1ce">
+							<h2 class="cm_c1c">热门百科</h2>
+						</div>
+						
+					</li>
+					<li class="cm_pc_12 cm_minh8 cm_tc right_ts_list">
+						
+						<ul class="cm_pc_12 cm_lh2 ">
+							<% for( k in indexList.types35 ){ %>
+								<% var item = indexList.types35[k] %>
+								<li class="cm_pc_3">
+									<a class="cm_fs08" href="<% if(item.Url){ %><%= item.Url %><% }else{ %><%=site.path%>/a/<%=moment(item.EditDate).format('YYYYMMDD')%><%=item.Id%>.html<% } %>" target="_blank" title="<%= item.Title %>"><%= item.Title.substring(0,6) %></a>
+								</li>
+							<% } %>
+						</ul>
+					</li>
+				</ul>
+				<% include ../components/info_right_pics.html%>
+				<% include ../components/info_right_rank.html%>
+			</li>
+		</ul>
+	</div>
+	<% include ../components/index_hot.html%>
+	<div id="bc_foot"><% include ../components/index_foot.html %></div>
+</div>
+<link rel="stylesheet" href="<%=site.path%>/css/apps/index01.css">
+
+<script src="<%=site.path%>/bundle/channel_index.js"></script>
+<% include ../common/footer.html %>

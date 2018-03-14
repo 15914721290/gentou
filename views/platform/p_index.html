@@ -1,0 +1,19 @@
+<% include ../common/header.html %>
+<div class="cm_main2">
+	<div  class="cm_row">
+        <% include ../components/common_head.html%>
+        <% include ../components/index_menu.html%>
+    </div>
+    <!--搜索的banner图-->
+	<% include ./tpl/p2p_index_banner.html%>
+    <div class="cm_main cm_bf">
+        <!--找平台-->
+       <% include ./tpl/p2p_index_look.html%>
+
+    </div>
+</div>
+<script src="<%=site.path%>/bundle/commonJS.js"></script>
+<script src="<%=site.path%>/components/channel_swiper.js"></script>
+<link rel="stylesheet" href="<%=site.path%>/js/jqplugin/idangerous.swiper.min.css">
+<link rel="stylesheet" href="<%=site.path%>/css/apps/index02.css">
+<% include ../common/footer.html %>

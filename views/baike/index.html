@@ -1,0 +1,19 @@
+<% include ../common/header.html %>
+<div class="cm_main2">
+	<div id="bc_head" class="cm_row"><% include ../components/index_head02.html %></div>
+	
+	<div class="cm_main cm_c6b">
+		<div class="cm_row cm_bf">
+			<% include ./tpl/cm_baike_index_swper.html %>
+			<% include ./tpl/cm_baike_index_text.html %>
+			<% include ./tpl/cm_baike_index_down.html %>
+
+		</div>
+		<% include ./tpl/cm_baike.html %>
+	</div>
+	<div id="bc_foot"><% include ../components/index_foot.html %></div>
+</div>
+<script src="<%=site.path%>/bundle/commonJS.js"></script>
+<script src="<%=site.path%>/components/channel_swiper.js"></script>
+<script src="<%=site.path%>/bundle/seo_baike_index.js"></script>
+<% include ../common/footer.html %>

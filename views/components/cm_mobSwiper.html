@@ -1,0 +1,397 @@
+<style>
+    @media screen and (max-width: 768px){
+    html,body{
+        width: 100%;
+        height: 100%;
+
+    }
+    #cm_modSwiper{
+        height: 100%;
+    }
+    .mob-slide,.warp_main{
+        height: 100%;
+    }
+    .swiper_warp,.mob_swiper {
+        height: 100%;
+    }
+    .swiper-ul{
+        height: 100%;
+    }
+   
+    .swiper-wrapper{
+        height: 100%;
+    }
+    
+    
+    .mob_swiper.swiper-container {
+        width: 100%;
+        height: 100%;
+    }  
+    .mob_swiper .swiper-slide{
+        width:100%;
+        height:100%;
+        position: relative;
+    }
+    .mob_swiper .swiper-slide img{
+        display:block;
+         width: 100%;
+         /*height: 100%;*/
+         padding-top: 112px;
+    }
+    @keyframes txtout
+    {
+    from {bottom:0px;}
+    to {bottom:-95px;}
+    }
+    @keyframes txtover
+    {
+    from {bottom:-95px;}
+    to {bottom:0px;}
+    }
+
+    @-moz-keyframes txtout
+    {
+    from {bottom:0px;}
+    to {bottom:-95px;}
+    }
+    @-moz-keyframes txtover
+    {
+    from {bottom:-95px;}
+    to {bottom:0px;}
+    }
+     @-ms-keyframes txtout
+    {
+    from {bottom:0px;}
+    to {bottom:-95px;}
+    }
+    @-ms-keyframes txtover
+    {
+    from {bottom:-95px;}
+    to {bottom:0px;}
+    }
+
+     @-webkit-keyframes txtout
+    {
+    from {bottom:0px;}
+    to {bottom:-95px;}
+    }
+    @-webkit-keyframes txtover
+    {
+    from {bottom:-95px;}
+    to {bottom:0px;}
+    }
+
+     @-o-keyframes txtout
+    {
+    from {bottom:0px;}
+    to {bottom:-95px;}
+    }
+    @-o-keyframes txtover
+    {
+    from {bottom:-95px;}
+    to {bottom:0px;}
+    }
+
+
+
+
+
+
+    .mob_swiper .swiper-slide .txtDiv{
+        height: 70px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background:url('../../images/pics/ban.png');
+        background-size:100%;
+        -webkit-background-size:100%;
+        -o-background-size:100%;
+        -moz-background-size:100%;
+        -ms-background-size:100%;
+        /*background-size: 100%;*/
+        z-index: 20;
+        overflow: auto;
+        padding: 0 20px;
+        overflow: scroll;
+        
+    }
+    .mob_swiper .swiper-slide .txtDiv .p1{
+        font-weight: 700;
+
+    }
+    .mob_swiper .swiper-slide .txtDiv .p2{
+        font-size: 12px;
+        padding: 10px 0;
+        line-height: 20px;
+    }
+    .mob_swiper .swiper-slide .txtDiv span{
+        position: absolute;
+        top:0px;
+        right:20px;
+        font-size: 14px;
+    }
+    .mob_swiper .swiper-slide .txtDiv span i{
+        font-size: 18px;
+        font-style:normal;
+        font-weight: 700;
+    }
+    .mob_swiper .swiper-slide .txtDiv::-webkit-scrollbar {
+        display: none;
+    }
+    .mob_swiper .swiper-slide .txtDiv::-moz-scrollbar {
+        display: none;
+    }
+    .mob_swiper .swiper-slide .txtDiv::-ms-scrollbar {
+        display: none;
+    }
+    .mob_swiper .swiper-slide .txtDiv::-o-scrollbar {
+        display: none;
+    }
+    .mob_swiper .swiper-slide .imgDiv{
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+    }
+    .mob_swiper .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+        background: #fff;
+        opacity: .4;
+    }
+    .mob_swiper .swiper-pagination-bullet-active {
+        opacity: 1;
+    }
+  .mob_swipwe_head{
+        width: 100%;
+    }
+    .warp_main{
+        position: relative;
+    }
+
+    .warp_main .nav {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+    
+    }
+    .warp_main .nav .mob_swipwe_tab{
+        height: 53px;
+        background: rgba(0,0,0,.7);
+
+    }
+    .warp_main .nav .con{
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+    .warp_main .nav .con a{
+         display: block;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .warp_main .nav .mob_swipwe_tab .right{
+        float: right;
+    }
+    .warp_main .nav .mob_swipwe_tab .con_back {
+        background: url('/images/pics/icon_3.png') no-repeat center;
+        background-size: 35%;
+        margin-left: 5px;
+       
+    }
+    .warp_main .nav .mob_swipwe_tab .con_ask {
+        background: url('/images/pics/icon-1.png') no-repeat center;
+        background-size: 70%;
+    }
+    .warp_main .nav .con_chk {
+        background: url('/images/pics/icon-2.png') no-repeat center;
+        background-size: 70%;
+    }
+    .list_warp,
+    .pl_warp{
+        width: 100%;
+        display: none;
+    }
+
+    /*图片列表*/
+    #cm_informationData{
+        overflow: hidden;
+        background: #000;
+    }
+    #cm_informationData section{
+        text-align: center;
+    }
+    #cm_informationData section img{
+        width: 95%;
+    }
+
+
+    /*最近更新*/
+    #cm_recentUpdates{
+        background: #ffffff;
+    }
+    #cm_recentUpdates .line_box{
+        margin: 10px 0;
+        height: 25px;
+    }
+    #cm_recentUpdates .line_box .line_flag{
+        height: 1px;
+        background: #ddd;
+        margin-top: 8px;
+
+    }
+    #cm_recentUpdates .line_box .line_data{
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+
+    }
+  
+    .cm_mobUpdate ul li{
+        text-align: center;
+    }
+    
+    .cm_mobUpdate ul li a img {
+        width: 95%;
+        margin-bottom: 5px;
+    }
+    .cm_mobUpdate ul li a span{
+        display: block;
+        width: 95%;
+        height: 40px;
+        overflow: hidden;
+        line-height: 40px;
+        color: #fff;
+        font-size: 14px;
+    }
+
+        #cm_recentUpdates{
+            background: #000000;
+        }
+    }
+    @media screen and (orientation:landscape){
+         .mob_swiper .swiper-slide .imgDiv{
+            width: auto!important;
+            height: 100%;
+            overflow: hidden;
+        }
+         .mob_swiper .swiper-slide img{
+            display:block;
+            width: auto;
+            height: 100%;
+            padding-top: 112px;
+        }
+
+    }
+</style>
+
+
+<div class="mob-slide">
+    <div class="warp_main">
+        <!--移动端头部-->
+        <div class="nav">
+            <div class="mob_swipwe_head">
+                <div id="bc_head" class="cm_row">
+                    <% include ../components/index_head02.html %>
+                </div>
+            </div>
+            <div class="mob_swipwe_tab" >
+                <span class="con con_back">
+                    <a href="<%=site.path%>/pics/<%= articleChannel.Alias %>/"></a>
+                </span>
+                <div class="right">
+                    <span class="con con_ask"></span>
+                    <span class="con con_chk"></span>
+                </div>
+            </div>
+        </div>
+        <ul class="swiper-ul" >
+            <!--列表-->
+            <li class="list_warp cm_row">
+                <div id="cm_informationData">
+                    
+                        <section class="cm_mob_6">
+                            
+                            <% for(var i=0;i<information.Content.length;i+=2){ %>
+                                    <img src="<%= information.Content[i].Url %>" alt="">
+                            <% } %>
+                        </section>
+                        
+                        <section class="cm_mob_6">
+                            <% for(var j=1;j<information.Content.length;j+=2){ %>
+                                    <img src="<%= information.Content[j].Url %>" alt="">
+                            <% } %>
+                        </section>
+
+                </div>
+                <!--移动端最近更新-->
+                <div id="cm_recentUpdates" class="cm-pc-4 cm_mob-12">
+                    <div class="line_box">
+                        <span class="line_flag cm_mob_4"></span>
+                        <span class="line_data cm_mob_4">最近更新</span>
+                        <span class="line_flag cm_mob_4"></span>
+                    </div>
+                    <div class="cm_mobUpdate cm_row">
+                        <ul>
+                            <% for(var i=0;i<newArticle.length;i++){ %>
+                                <li class="cm_mob_6">
+                                    <a href="<%=site.path%>/pics/<%= newArticle[i].Id %>.html">
+                                        <img src="<%= newArticle[i].Thumbnail %>" alt="">
+                                    </a>
+                                    <a href="<%=site.path%>/pics/<%= newArticle[i].Id %>.html">
+                                        <span><%= newArticle[i].Title %></span>
+                                    </a>
+                                </li>
+
+                           <%  } %>
+                            
+                        </ul>
+
+
+                    </div>
+                </div>
+            </li>
+              <!--评论-->
+            <li class="pl_warp">
+                <div id="cm_discuss" class="cm-pc-8 cm_mob-12">
+                    <% include ../components/cm_discuss.html %>
+                </div>
+            </li>
+            <!--轮播图-->
+            <li class="swiper_warp " >
+                <div class="swiper-container mob_swiper">
+                    <div class="swiper-wrapper">
+                        <% if(information.Type==5){ %>
+                            <% if(information.Content){ %>
+                                <% for(var i=0,j=1;i<information.Content.length;i++,j++){ %>
+                                    <section class="swiper-slide swiper-slide2" >
+                                    <div class="imgDiv cell" style="display: flex;align-items:center;justify-content: center;">
+                                        <img src="<%= information.Content[i].Url %>" alt="">
+                                    </div>
+                                    <div class="txtDiv">
+                                        <span><i><%= j %></i>/<%= information.Content.length %></span>
+                                        <p class="p1 cm_mob_10"><%= information.Title %></p>
+                                        <p class="p2 cm_mob_12"><%= information.Content[i].Description %></p>
+                                    </div>
+                                    </section>
+
+                                <% } %>
+                            <% } %>
+                        <% } %>
+                    
+                    </div>
+                </div>
+
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+

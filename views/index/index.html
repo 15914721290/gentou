@@ -1,0 +1,94 @@
+<% include ../common/header.html %>
+
+<div class="cm_main2">
+	<div id="bc_head"><% include ../components/index_head.html %></div>
+</div>
+<div class="cm_main2 cm_bf">
+	<div class="cm_main">
+		<ul class="cm_row cm_pt20pc">
+			<li class="cm_pc_12 cm_mb1">
+				<div class="cm_pc_9 cm_mob_12 cm_pr20pc">
+					<ul class="cm_pc_12 cm_b1ce">
+						<li class="cm_pc_12 cm_be cm_c7c cm_tab01">
+							<% var arr4 = ['热门平台','上市平台','国资平台','风投平台'],len4=arr4.length;
+								for(var i4=0;i4<len4;i4++){%>
+								<div class="cm_fl cm_mob_3 cm_hl205 cm_tc cm_prl20pc <%if(i4==0){%>cm_bt2c1 cm_c1c cm_bf<%}%>">
+									<span class="cm_fs09"><%=arr4[i4]%></span>
+								</div>
+							<%}%>
+						</li>
+						<li class="cm_pc_12 cm_minh8 cm_tab01_list" >
+							<ul class="cm_pc_12 cm_mtb1">
+								<% for(var i=0;i<9;i++){%>
+									<li class="cm_pc_6f cm_mob_4 cm_tc cm_mb1 cm_oh">
+										<a class="" href="123" title="123" target="_blank">
+											<div class="cm_lh2">热门平台</div>
+											<div class=""><span class="cm_fs09 cm_c8c">综合利率</span><span class="cm_fs09 cm_c10c">19%</span></div>
+										</a>
+									</li>
+								<% }%>
+							</ul>
+							<ul class="cm_pc_12 cm_dn">
+								<% for(var i=0;i<9;i++){%>
+									<li class="cm_pc_6f cm_mob_4 cm_tc cm_mb1 cm_oh">
+										<a class="" href="123" title="123" target="_blank">
+											<div class="cm_lh2">上市平台</div>
+											<div class=""><span class="cm_fs09 cm_c8c">综合利率</span><span class="cm_fs09 cm_c10c">19%</span></div>
+										</a>
+									</li>
+								<% }%>
+							</ul> 
+						</li>
+					</ul>
+				</div>
+				<div class="cm_pc_3 cm_pc">
+					<ul class="cm_pc_12 cm_b1ce">
+						<li class="cm_pc_12 cm_be cm_c7c">
+							<div class="cm_pc_12 cm_hl205 cm_prl20px cm_c1c">
+								<span class="cm_fs09">找平台</span>
+							</div>
+						</li>
+						<li class="cm_pc_12 cm_minh8 cm_prl20px" >
+							<ul class="cm_pc_12">
+								<li class="cm_pc_12 cm_tc cm_c7c cm_mtb05">正常运营<span class="cm_c10c">199</span>家P2P平台</li>
+								<li class="cm_pc_12 cm_bf cm_b1ce cm_mb05">
+									<div class="cm_pc_12 cm_bf cm_b1ce cm_pop_menu02">
+										<span class="cm_pc_12 cm_hl2 cm_prl20px cm_bf cm_c8c">按平台评级</span>
+										<span class="cm_pa cm_tr0 cm_hl2 cm_be cm_cf"><img class="cm_fl cm_m05 cm_bs100" src="<%=site.path%>/images/index/arrow_down_black.png" /></span>
+									</div>
+									<ul class="cm_pa cm_tl0 cm_z9 cm_w100 cm_mt2 cm_bf cm_tc cm_b1ce menu_pop02 cm_dn">
+										<% var arrs = ['A1级','A2级','A3级','A4级'],lens=arrs.length;
+										for(var i2=0;i2<lens;i2++){%>
+											<li class="cm_pc_12 cm_hl3 cm_bb1ce"><%=arrs[i2]%></li>
+										<%}%>
+									</ul>
+								</li>
+								<li class="cm_pc_12 cm_bf cm_b1ce cm_mb05">
+									<div class="cm_pc_12 cm_bf cm_b1ce cm_pop_menu02">
+										<span class="cm_pc_12 cm_hl2 cm_prl20px cm_bf cm_c8c">按收益</span>
+										<span class="cm_pa cm_tr0 cm_hl2 cm_be cm_cf"><img class="cm_fl cm_m05 cm_bs100" src="<%=site.path%>/images/index/arrow_down_black.png" /></span>
+									</div>
+									<ul class="cm_pa cm_tl0 cm_z9 cm_w100 cm_mt2 cm_bf cm_tc cm_b1ce menu_pop02 cm_dn">
+										<% var arrs = ['收益100','收益1000','收益10000'],lens=arrs.length;
+										for(var i2=0;i2<lens;i2++){%>
+											<li class="cm_pc_12 cm_hl3 cm_bb1ce"><%=arrs[i2]%></li>
+										<%}%>
+									</ul>
+								</li>
+								<li class="cm_pc_12 cm_hl205 cm_mb05 cm_br02 cm_tc cm_c1b cm_cf">找平台</li>
+							</ul>    
+						</li>
+					</ul>
+				</div>
+			</li>
+
+			<li class="cm_pc_12 cm_mb1"><% include ./tpl/index_toutiao.html %></li>
+			<li class="cm_pc_12 cm_mb1"><% include ../template/common_banner2.html %></li>
+		</ul>
+	</div>
+	<% include ../components/index_friend.html %>
+	<div id="bc_foot"><% include ../components/index_foot.html %></div>
+</div>
+<link rel="stylesheet" href="<%=site.path%>/js/jqplugin/idangerous.swiper.min.css">
+<script src="<%=site.path%>/bundle/index_index.js"></script>
+<% include ../common/footer.html %>

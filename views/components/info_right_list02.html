@@ -1,0 +1,37 @@
+<ul class="cm_pc_12 cm_bf cm_mb20px right_info_list cm_pc">
+        <li class="cm_pc_12 cm_prl20px">
+            <div class="cm_pc_12 cm_hl205 cm_bb1ce">
+                <h2 class="cm_c1c">两性关系</h2>
+            </div>
+            <div class="cm_pa cm_tr0 cm_pr20px cm_hl205">
+                <!--<span class="cm_c7c cm_fs09">更多</span>-->
+            </div>
+        </li>
+        <li class="cm_pc_12 cm_minh8 cm_prl20px">
+             <ul class="cm_pc_12 cm_lh2 cm_c7c right_tsinfo">
+                 <% for(k in indexList.types33){ %>
+                     <% var item = indexList.types33[k];if(item.Description==null){item.Description=''} %>
+                     <li class="cm_pc_12  " >
+                         <div class="cm_pc_12 info_list <% if(k == 0){ %><%= 'cm_dn' %><% } %> " style="height:33px;overflow:hidden;">
+                             . <a class="cm_fs08 cm_c4c"><%= item.Title %></a>
+                         </div>
+                         <ul class="cm_pc_12 cm_c6b cm_prl05 cm_mb05 tsinfo  <% if(k != 0){ %><%= 'cm_dn' %><% } %>">
+                             <li class="cm_pc_12" style="height:33px;overflow:hidden;">
+                                 <a class="cm_fs08" href="<% if(item.Url){ %><%= item.Url %><% }else{ %><%=site.path%>/a/<%=moment(item.EditDate).format('YYYYMMDD')%><%=item.Id%>.html<% } %>" target="_blank" title="<%= item.Title %>"><%= item.Title %></a>
+                             </li>
+                             <li class="cm_pc_12 cm_c5c">
+                                 <div class="cm_pa cm_tl0 cm_z2 cm_w6 cm_h4 scaleImg">
+                                     <img class="cm_wh100 cm_bs100 " src="<%= item.Thumbnail %>"/>
+                                 </div>
+                                 <div class="cm_pc_12 cm_pl605 cm_pr0 cm_minh4 cm_mb05">
+                                     <div class="cm_pc_12 cm_wb_b">
+                                         <span class="cm_fs08 cm_c5c"><%= item.Description.substring(0,30) %></span><a href="<% if(item.Url){ %><%= item.Url %><% }else{ %><%=site.path%>/a/<%=moment(item.EditDate).format('YYYYMMDD')%><%=item.Id%>.html<% } %>" target="_blank">[详细]</a>
+                                     </div>
+                                 </div>
+                             </li>
+                         </ul>
+                     </li>
+                 <% } %>
+            </ul>
+        </li>
+    </ul>

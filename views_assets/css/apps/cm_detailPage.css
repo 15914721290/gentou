@@ -1,0 +1,307 @@
+.commonDetailPage{
+    /*width: 722px;*/
+    height: auto;
+    padding: 40px 30px;
+    background: #fff;
+    margin-bottom: 20px;
+
+}
+.commonDetailPage .detailPageHead{
+}
+.commonDetailPage .detailPageHead .detailPageh1{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    
+
+}
+.commonDetailPage .detailPageHead .detailPagep{
+    font-size: 16px;
+    color: #999;
+    text-align: center;
+    
+}
+.commonDetailPage .detailPageBody{
+    margin-top: 20px;
+
+}
+.commonDetailPage .detailPageBody  center img,
+.commonDetailPage .detailPageBody p img{
+    display: block;
+    margin:  0 auto;
+    width: 630px;
+    height: 340px;
+
+}
+
+.commonDetailPage .detailPageBody p{
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    text-indent: 2em;
+    margin-bottom: 30px;
+    line-height: 28px;
+}
+.commonDetailPage .detailPageBody p a{
+    color: red;
+}
+.commonDetailPage .detailPageBody .share{
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 55px;
+}
+.bdsharebuttonbox{
+    display: inline-block;
+}
+.commonDetailPage .detailPageBody .detailBox{
+    width: 696px;
+    height: 286px;
+    border: 1px solid #cea770;
+    margin:  0 auto;
+}
+.commonDetailPage .detailPageBody .detailBox .detailBoxTip{
+    height: 42px;
+    line-height: 42px;
+    background: #cea770;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 28px;
+
+
+}
+.commonDetailPage .detailPageBody .detailBox .detailBoxBody{
+    padding: 20px 30px;
+
+}
+.commonDetailPage .detailPageBody .detailBox .detailBoxBody .boxLeft{
+    width: 416px;
+    height: 202px;
+    float: left;
+    /*background: blue;*/
+}
+.commonDetailPage .detailPageBody .detailBox .detailBoxBody .boxLeft div{
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+}
+.commonDetailPage .detailPageBody .detailBox .detailBoxBody .boxLeft div:first-child+div{
+    margin-top: 30px;
+}
+.commonDetailPage .detailPageBody .detailBox .detailBoxBody .boxLeft div p{
+    
+    margin-bottom: 5px;
+
+}
+.commonDetailPage .detailPageBody .detailBox .detailBoxBody .boxRight{
+    height: 202px;
+    width: 215px;
+    float: right;
+    border-left: 1px solid #999;
+
+}
+.commonDetailPage .detailPageBody .detailBox .detailBoxBody .boxRight img{
+    width: 148px;
+    height: 150px;
+    margin-left: 48px;
+}
+.commonDetailPage .detailPageBody .detailBox .detailBoxBody .boxRight  p{
+    width: 146px;
+    text-indent: 0em;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 18px;
+    margin-left: 48px;
+    
+
+}
+.commonDetailPage .detailPageBody .share{
+    line-height: 28px;
+    overflow: hidden;
+}
+.commonDetailPage .detailPageBody .share>span{
+    float: left;
+    margin-right: 20px;
+}
+.commonDetailPage .detailPageBody .share>.bdsharebuttonbox{
+    float: left;
+}
+.commonDetailPage .detailPageBody .share .shareLink {
+    display: inline-block;;
+    background: red;
+    width: 25px;
+    height: 25px;
+    background: url("../img/iocn.png") no-repeat ;
+    /*background-size: 100%;*/
+}
+.commonDetailPage .detailPageBody .share .sina{
+    background: url("../img/iocn.png") no-repeat  -27px 0px;
+
+}
+.commonDetailPage .detailPageBody .share .qq{
+    background: url("../img/iocn.png") no-repeat  -54px 0px;
+}
+.commonDetailPage .detailPageBody .share .kongjian{
+    background: url("../img/iocn.png") no-repeat  -79px 0px;
+}
+.commonDetailPage .detailPageBody .share .heart{
+    background: url("../img/iocn.png") no-repeat  -104px 0px;
+}
+
+.commonDetailPage .detailPageBody .detailFoot{
+    height: 46px;
+    width: 696px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.commonDetailPage .detailPageBody .detailFoot a{
+    display: inline-block;
+    font-size: 16px;
+    height: 100%;
+    padding: 0 30px;
+    line-height: 46px;
+    color: #cea770;
+    border: 1px solid #cea770;
+    background: #fff;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px){
+
+    .commonDetailPage{
+        width:100%;
+        padding: 30px 15px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+    }
+    .commonDetailPage .detailPageHead .detailPageh1{
+        font-size: 16px;
+        text-align: center;
+        font-size: 18px;
+        color: #333;
+
+    }
+    .commonDetailPage .detailPageHead .detailPagep{
+        width: 100%;
+        margin-top: 20px;
+        font-size: 14px;
+
+    }
+    .commonDetailPage .detailPageHead{
+        width: 100%;
+        max-height: 250px;
+    }
+    .commonDetailPage .detailPageBody{
+        width: 100%;
+    }
+    .commonDetailPage .detailPageBody p{
+        font-size: 14px;
+    }
+    
+    .commonDetailPage .detailPageBody center  img,
+    .commonDetailPage .detailPageBody p img{
+        width: 100%;
+        height: auto;
+    }
+    .commonDetailPage .detailPageBody .detailText{
+        font-size: 14px;
+        margin-bottom: 30px;
+        line-height: 24px;
+    }
+    .commonDetailPage .detailPageBody .share{
+        font-size: 14px;
+    }
+    .commonDetailPage .detailPageBody .share .shareLink{
+        width: 20px;
+        height: 20px;
+        background-size: 270%;
+    }
+    .commonDetailPage .detailPageBody .share .sina{
+        background: url("/images/pics/iocn.png") no-repeat  -12px 0px;
+        background-size: 270%;
+    }
+    .commonDetailPage .detailPageBody .share .qq{
+        background: url("/images/pics/iocn.png") no-repeat  -45px 0px;
+        background-size: 270%;
+    }
+    .commonDetailPage .detailPageBody .share .kongjian{
+        background: url("/images/pics/iocn.png") no-repeat  -66px 0px;
+        background-size: 270%;
+    }
+    .commonDetailPage .detailPageBody .share .heart{
+        background: url("/images/pics/iocn.png") no-repeat  -86px 0px;
+        background-size: 270%;
+    }
+    .commonDetailPage .detailPageBody .detailBox{
+        width: 100%;
+        height: auto;
+    }
+    .commonDetailPage .detailPageBody .detailBox .detailBoxTip{
+        height: 40px;
+        font-size: 14px;
+        line-height: 40px;
+        text-align: center;
+        padding-left: 0px;
+
+    }
+    .commonDetailPage .detailPageBody .detailBox .detailBoxBody{
+        padding: 15px 20px;
+    }
+    .commonDetailPage .detailPageBody .detailBox .detailBoxBody .boxLeft,
+    .commonDetailPage .detailPageBody .detailBox .detailBoxBody .boxRight{
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+    .commonDetailPage .detailPageBody .detailBox .detailBoxBody .boxRight{
+        float: none;
+        border: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    /*.commonDetailPage .detailPageBody .detailBox .detailBoxBody .boxLeft div:first-child{
+        display: none;
+
+    }*/
+    .commonDetailPage .detailPageBody .detailBox .detailBoxBody .boxLeft div:first-child+div{
+        margin: 0;
+    }
+
+    .commonDetailPage .detailPageBody .detailBox .detailBoxBody .boxLeft div p{
+        font-size: 12px;
+        margin-bottom: 0;
+        line-height: 25px;
+    }
+    .commonDetailPage .detailPageBody .detailBox .detailBoxBody .boxRight img{
+        width: 107px;
+        height: 107px;
+        margin-left: 0px;
+    }
+    .commonDetailPage .detailPageBody .detailBox .detailBoxBody .boxRight  p{
+        font-size: 14px;
+        color: #333;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .commonDetailPage .detailPageBody .detailFoot{
+        display: none;
+        /*width: 100%;*/
+        /*margin-top: 20px;*/
+        /*height: auto;*/
+    }
+    .commonDetailPage .detailPageBody .detailFoot a{
+        height: 33px;
+        padding: 0 15px;
+        line-height: 33px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        font-size: 12px;
+
+    }
+}

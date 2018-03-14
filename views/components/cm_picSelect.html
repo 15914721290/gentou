@@ -1,0 +1,21 @@
+<div class="cm_pc_12 cm_pr cm_bf picsMain">
+        <div style="height:50px;border-bottom:1px solid #ddd;margin:0 20px;">
+            <h2 style="font-size:18px;display:inline-block;border-bottom:3px solid #cea770;height:50px;line-height:50px;color:#cea770;">精选图片</h2>
+        </div>
+        <ul class="cm_pc_12 cm_pr cm_pt20px cm_pr20px picsLeft cm_tc">
+                <% for(var i=0,k=1;i<indexList.types26.length;i++,k++){%>
+                <li class="cm_mob_12 cm_pc_3 cm_pr cm_mb1">
+                    <div class="cm_pc_12 cm_pl20px cm_pr">
+                        <a href="<%= indexList.types26[i].Url  %>" style="display:inline-block;width:100%;" target="_blank">
+                            <div class="cm_w100 cm_h13 scaleImg">
+                                <img class="cm_wh100 cm_bs100 lazy" data-original="<%= indexList.types26[i].Thumbnail  %>" alt="<%= indexList.types26[i].Title %>"/>
+                            </div>
+                            <div class="cm_pa cm_bl0 cm_z2 cm_w100 cm_pl20px cm_hl2">
+                                <span class="cm_pc_12 cm_o08 cm_fs08 cm_bk02 cm_cf"><%= indexList.types26[i].Title  %></span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            <%}%>
+        </ul>	
+    </div>

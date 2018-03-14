@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="<%=site.path%>/js/jqplugin/idangerous.swiper.min.css">
+<link rel="stylesheet" href="<%=site.path%>/css/apps/cm_swiperSlide.css">
+
+		
+	 <div class="swiper-container img_slide3 cm_pr">					
+        <div class="swiper-wrapper ">
+            <% for(i in indexList.types41){ %>
+            <div class="swiper-slide cm_wh100 ">
+                <div class="cm_pr Img-swiper">
+                    <a href="<%= indexList.types41[i].Url %>">
+                        <img class="" src="<%= indexList.types41[i].Thumbnail %>" alt="<%= indexList.types41[i].Title %>"/>
+                    </a>
+                </div>
+            </div>
+            <% } %>
+         
+        </div>	
+        <!-- Add Arrows -->
+		<div class="pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+	
+
+  
+

@@ -1,0 +1,35 @@
+<% if(articlePage.PageNum>1){ %>
+    <div class="cm_pc_12 cm_pr cm_bf cm_ptb05 cm_mb20px commonPage">
+    <div class=" cm_lh2 cm_tc commonPageInner" >
+        <ul class="" id="info_page" style="overflow:hidden;display:inline-block;">
+                <%if(articlePage.PrevPage!=0){%>
+                <li class="cm_fl cm_ml05 cm_w4 cm_h2 cm_b1c5 mobile_hide"><a class="cm_c5c cm_hvfc" href="<%=url2%>-<%=articlePage.PrevPage%>/">上一页</a></li>
+                <%}%>
+            <% for(var i=articlePage.StartId;i<articlePage.EndId;i++){%>
+                <li class="cm_fl cm_ml05 cm_wh2 <%if(i==articlePage.PageNow){%>cm_c1b<%}else{%>cm_b1c5<%}%> pageItem" aid="<%if(i==articlePage.PageNow){%>1<%}%>">
+                    <a class="<%if(i==articlePage.PageNow){%>cm_cf<%}else{%>cm_c5c<%}%> cm_hvfc" href="<%=url2%>-<%=i%>/"><%=i%></a>
+                </li>
+            <% }%>
+
+            <%if(articlePage.NoPage!=0){%>
+                <li class="cm_fl cm_ml05 cm_wh2 pageItem" aid="no">..</li>
+                <li class="cm_fl cm_ml05 cm_minw2 cm_h2 cm_c1b pageItem" aid="1"><a class="cm_cf cm_hvfc" href="<%=url2%>-<%=articlePage.NoPage%>/"><%=articlePage.NoPage%></a></li>
+            <%}%> 
+           
+             <select class="cm_fl" style="margin-left:5px;height:26px;color:#999;" onchange="window.location.pathname=this.value" >
+                 <option value ="请选择">请选择</option>
+                <% for(var i=articlePage.StartId;i<articlePage.EndId;i++){%>
+                    
+                <option value ="<%=url2%>-<%=i%>/">第<%=i%>页</option>
+                <% }%>
+        
+            </select>
+            <%if(articlePage.NextPage!=0){%>
+                <li class="cm_fl cm_ml05 cm_w4 cm_h2 cm_b1c5 mobile_hide pageItem"><a class="cm_c5c cm_hvfc" href="<%=url2%>-<%=articlePage.NextPage%>/">下一页</a></li>
+            <%}%>       
+        </ul>
+       
+    </div>
+</div>
+<% } %>
+

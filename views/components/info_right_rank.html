@@ -1,0 +1,21 @@
+<ul class="cm_pc_12 cm_bf cm_mb20px right_ts_main weekRank">
+        <li class="cm_pc_12 cm_prl20px cm_mb05">
+            <div class="cm_pc_6 cm_hl205 cm_bb1ce">
+                <h2 class="cm_c1c weekRankTitle">一周排行</h2>
+            </div>
+            <div class="cm_pc_6 cm_c7c">
+                <div class="cm_pc_12 cm_tc right_ts">
+                    <div class="cm_pc_6 cm_hl205 cm_bl1ce cm_bt2c1 cm_c1c cm_bb1ce">
+                        <span class="cm_fs09"><%=rightRank1.title%></span>
+                    </div>
+                    <div class="cm_pc_6 cm_hl205 cm_bl1ce cm_bt1ce cm_br1ce">
+                        <span class="cm_fs09"><%=rightRank2.title%></span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="cm_pc_12 cm_minh8 right_ts_list">
+            <ul class="cm_pc_12 cm_prl20px cm_lh2"><% for(var i=0,k=1;i<rightRank1.Records.length;i++,k++){%><li class="cm_pc_12 cm_bb1ce"><div class="cm_pa cm_tl0 cm_wh1 cm_hl1 cm_tc cm_mtb05 cm_br02 cm_cf <%if(i<3){%>cm_c1b<%}else{%>cm_c5b<%}%>"><div class="cm_fs07 cm_mt01"><%=k%></div></div><div class="cm_pc_12 cm_pl105 cm_pr0 cm_ts cm_hl2"><a class="cm_fs08 cm_c4c" href="<%=site.path%>/a/<%=moment(rightRank1.Records[i].EditDate).format('YYYYMMDD')%><%=rightRank1.Records[i].Id%>.html" title="<%=rightRank1.Records[i].Title%>" target="_blank"><%=rightRank1.Records[i].Title%></a></div></li><% }%></ul>
+            <ul class="cm_pc_12 cm_prl20px cm_lh2"><% for(var i=0,k=1;i<rightRank2.Records.length;i++,k++){%><li class="cm_pc_12 cm_bb1ce"><div class="cm_pa cm_tl0 cm_wh1 cm_hl1 cm_tc cm_mtb05 cm_br02 cm_cf <%if(i<3){%>cm_c1b<%}else{%>cm_c5b<%}%>"><div class="cm_fs07 cm_mt01"><%=k%></div></div><div class="cm_pc_12 cm_pl105 cm_pr0 cm_ts cm_hl2"><a class="cm_fs08 cm_c4c" href="<%=site.path%>/a/<%=moment(rightRank2.Records[i].EditDate).format('YYYYMMDD')%><%=rightRank2.Records[i].Id%>.html" title="<%=rightRank2.Records[i].Title%>" target="_blank"><%=rightRank2.Records[i].Title%></a></div></li><% }%></ul>
+        </li>
+    </ul>

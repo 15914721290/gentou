@@ -1,0 +1,84 @@
+<style>
+    .toutiao_h{
+        height:350px;
+        margin:20px 0!important;
+    }
+    .toutiao_h2{
+        height:390px;
+        padding-top: 20px;
+    }
+      .toutiaoPic{
+          width: 340px;
+          height: 320px;
+          margin-left:20px;
+      }
+      .toutiaoPic  span{
+          height: 2em;
+          line-height: 2em;
+      }
+      .hover:hover{
+          color: #cea770 !important;
+      }
+      @media (max-width:768px){
+         .toutiaoPic{
+            width: 172px;
+            height: 209px;
+            margin: 0 auto;
+        }
+        .toutiaoPic  span{
+          height: auto;
+          line-height: 22px;
+          font-size: 14px;
+      }
+      .toutiao_h2{
+        height:auto;
+        border-bottom: 1px solid #ddd;
+      }
+   }
+  
+</style>
+<div style="overflow:hidden;background:#fff;" class="cm_mb20px">
+	<% if(indexList.types29.Url){%>
+    <div class="cm_mob_12 cm_pc_6 cm_bf cm_pr cm_tc cm_mt20px " >
+        <div class=" cm_pr toutiaoPic" >	
+            <a href="<% if(indexList.types29.Url){ %><%= indexList.types29.Url %><% }else{ %><%=site.path%>/a/<%=moment(indexList.types29.EditDate).format('YYYYMMDD')%><%=indexList.types29.Id%>.html<% } %>"  title="<%= indexList.types29.Title %>" target="_blank" >          
+                <img class="cm_wh100 cm_bs100" src="<%= indexList.types29.Thumbnail %>" alt="暂无图片"/>
+            </a>
+            <span class="cm_pa cm_bl0 cm_z2 cm_o08 cm_w100  cm_bk02 cm_cf" style="overflow:hidden;"><%= indexList.types29.Title%></span>      
+        </div>
+    </div>
+    <% } %>	
+    <div class="cm_mob_12 cm_pc_6  " >
+        <div class="cm_pc_12 cm_prl20pc toutiao_h2 cm_pr cm_bf">
+            <ul class="cm_pc_12 cm_pr cm_bf cm_ac4c cm_c4c cm_bb1ce">
+                <li class="cm_pc_12 cm_pr " style="padding:20px 0 10px 0;">
+                    <a href="<%= indexList.types30.Url %>" title="<%= indexList.types30.Title %>" target="_blank">
+                    <% if(indexList.types30.Title){ %>
+                        <strong class="cm_fs15 cm_mtb1 cm_c3c cm_fwb hover" style="font-size:16px;"><%= indexList.types30.Title %></strong>
+                    <%  } %>
+                        
+                    </a>
+                </li>
+                <li class="cm_pc_12 cm_pr cm_lh2 cm_wb_b" style="line-height: 22px !important;margin-bottom: 10px">
+                    <a href="<%= indexList.types30.Url %>" title="<%= indexList.types30.Title %>" target="_blank" style="display:inline;line-height:22px;font-size:12px;margin-bottom:10px;">
+                        <%= indexList.types30.Description %>
+                        <!--<span class="cm_fs09" style="display:block;line-height:22px;font-size:12px;margin-bottom:10px;"><%= indexList.types30.Description %></span>-->
+                    </a>
+                </li>
+            </ul>
+            <ul class="cm_pc_12 cm_pr cm_bf cm_ac4c cm_c4c">
+                <% for( k in indexList.types31){ %>
+                <% var item = indexList.types31[k] %>
+                    <li class="cm_pc_12 cm_pr cm_lh2" style="height:33px;overflow:hidden;">
+                        <a href="<% if(item.Url){ %><%= item.Url %><% }else{ %><%=site.path%>/a/<%=moment(item.EditDate).format('YYYYMMDD')%><%=item.Id%>.html<% } %>" title="<%= item.Title%>" target="_blank">
+                            <span class="cm_mob cm_fl" style="margin-right:10px;">.</span>
+                            <span class="cm_fs09"><%= item.Title %></span>
+                        </a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</div>
+
+   

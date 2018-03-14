@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="<%=site.path%>/css/apps/cm_about.css">
+<link rel="stylesheet" type="text/css" href="<%=site.path%>/css/apps/cm_chip.css" />
+<% include ../common/header.html %>
+    <div class="cm_main2">
+        <% include ../components/mobile_column_head.html %>
+            <!--PC端-->
+            <div id="bc_head" class="cm_row">
+                <% include ../components/common_head.html%>
+            </div>
+            <div class="cm_main2 cm_h8 cm_bf cm_pc">
+                <div class="cm_main">
+                    <ul class="cm_pc_12 cm_pr cm_mtb105">
+                        <li class="cm_mob_12 cm_pc_2 cm_prl05mob cm_pr">
+                            <img class="cm_fl img_logo" src="<%=site.path%>/images/icon.png" />
+                        </li>
+                        <li class="cm_mob_12 cm_pc_10 cm_prl05mob cm_pr">
+                            <div class="cm_pc_12 cm_pr cm_hl3 cm_mtb1 cm_bl1cc cm_ti2">
+                                网站地图
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--移动端nav-->
+            <div class="mobnav">
+                <ul>
+                    <li class="mobnav_Li cm_mob_3">
+                        <a href="<%=site.path%>/about.html" target="_blank" ref="nofollow">关于我们</a>
+                    </li>
+                    <li class="mobnav_Li cm_mob_3">
+                        <a href="<%=site.path%>/contact.html" target="_blank" ref="nofollow">联系我们</a>
+                    </li>
+                    <li class="mobnav_Li cm_mob_3">
+                        <a href="<%=site.path%>/law.html" target="_blank" ref="nofollow">服务条款</a>
+                    </li>
+                    <li class="mobnav_Li cm_mob_3 active">
+                        <a href="<%=site.path%>/sitemap.html" target="_blank" ref="nofollow">网站地图</a>
+                    </li>
+                </ul>
+            </div>
+            <!--主体内容-->
+            <div class="cm_main">
+                <div class="chip">
+                    <a href="<%=site.path%>/" target="_blank">首页</a>
+                    <a href="javascript:;" class="active" target="_blank">网站地图</a>
+                </div>
+                <div class="commonAbout">
+                    <div class="aboutBox">
+                        <div class="aboutLeft">
+                            <ul class="leftUl">
+                                <li class="leftLi">
+                                    <a href="<%=site.path%>/about.html" target="_blank" ref="nofollow">关于我们</a>
+                                </li>
+                                <li class="leftLi">
+                                    <a href="<%=site.path%>/contact.html" target="_blank" ref="nofollow">联系我们</a>
+                                </li>
+                                <li class="leftLi">
+                                    <a href="<%=site.path%>/law.html" target="_blank" ref="nofollow">服务条款</a>
+                                </li>
+                                <li class="leftLi">
+                                    <a href="<%=site.path%>/link.html" target="_blank" ref="nofollow">友情链接</a>
+                                </li>
+                                <li class="leftLi active">
+                                    <a href="<%=site.path%>/sitemap.html" target="_blank" ref="nofollow">网站地图</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="aboutRight">
+                                <ul class="rightUl rightAbout">
+									<%for(i in mapChannel){%>
+									<li class="cm_pc_12 cm_pr cm_prl20pc cm_bf channer_li">
+										<h2 class="cm_pc_12 cm_pr cm_hl4 cm_bb1cc channer_name"><a class="cm_fs1 cm_fwb cm_hvc1c" href="<%=mapChannel[i].url%>" title="<%=mapChannel[i].Name%>" target="_blank"><%=mapChannel[i].Name%></a></h2>
+										<div class="cm_pc_12 cm_pr cm_wb_b cm_lh2 cm_mb1 channer_list">
+											<% var thisChannel=mapChildren.filter(x=>x.ParentId==mapChannel[i].AggregateId);
+											   for(i2 in thisChannel){%>
+											   <span class="cm_fl cm_mr1"><a class="cm_hvc1c" href="<%=site.path%>/<%=mapChannel[i].Alias%>/<%=thisChannel[i2].Alias%>/" title="<%=thisChannel[i2].Name%>" target="_blank"><%=thisChannel[i2].Name%></a></span>
+											<%}%>						
+										</div>
+									</li>
+									<%}%>
+								</ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="bc_foot">
+                <% include ../components/index_foot.html %>
+            </div>
+    </div>
+
+
+    <script src="<%=site.path%>/bundle/commonJS.js"></script>
+    <% include ../common/footer.html %>

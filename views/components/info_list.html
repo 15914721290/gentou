@@ -1,0 +1,140 @@
+  <style>
+     
+      @media (max-width:768px){
+          .infolistMain{
+              padding: 0 20px;
+          }
+          .infolisHead{
+              height: 45px;
+          }
+          .infolisHead h2{
+              height: 45px;
+          }
+          .infolisHead h2 span{
+              display: inline-block;
+              box-sizing: border-box;
+              height: 100%;
+              font-size: 16px;
+              line-height: 44px;
+          }
+          .info_li{
+              height: 106px!important;
+          }
+          .topImg{
+              width: 109px!important;
+              height: 69px!important;
+          }
+          .info_list_ul{
+              min-height:auto;
+            height: 100%!important;
+            padding-left:127px!important;
+          }
+          .listNewHeight{
+              height: 100%!important;
+              margin: 0px!important;
+          }
+          .info_list_ul strong{
+              font-size: 14px;
+              
+          }
+          .info_list_ul .info_list_name{
+              height: 42px;
+              overflow: hidden;
+
+          }
+          .info_list_ul .info_list_tag{
+              font-size: 16px!important;
+          }
+         #detail{
+             font-size: 14px !important;
+             line-height: 26px !important;
+             margin-top: 8px !important;
+             margin-bottom: 20px !important;
+             color: #666 !important;
+             height: 52px !important;
+             overflow: hidden !important;
+         }
+          
+      }
+      #detail{
+          font-size: 14px !important;
+          line-height: 26px !important;
+          margin-top: 8px !important;
+          margin-bottom: 0 !important;
+          color: #666 !important;
+          height: 52px !important;
+          overflow: hidden !important;
+      }
+  
+  </style>
+
+
+<div class="cm_pc_12 cm_pr cm_bf cm_prl20px infolisHead ">
+    <h2 class="cm_pc_12 cm_bb1cc  ">
+        <span class="cm_fs15 cm_bb3c1"><%=articleList.listTitle%></span>
+    </h2>	
+</div>
+<ul class="cm_pc_12 cm_pr cm_bf cm_prl20pc  infolistMain articlePadding" flag='<%= data.message %>'>
+    <% for(i in articleList.Records){%>
+        <% if(articleList.Records[i].Type==0){ %>
+            <li class="cm_pc_12 cm_pr cm_bb1ce info_li">
+            <div class="cm_pc_12 cm_pr cm_mtb1 listNewHeight ">
+                <div class="cm_pa cm_tl0 cm_z2  ">
+                    <div class="cm_pr cm_w11 cm_h7 scaleImg topImg">
+                        <a class="" href="<%=site.path%>/a/<%=moment(articleList.Records[i].EditDate).format('YYYYMMDD')%><%=articleList.Records[i].Id%>.html" title="<%=articleList.Records[i].Title%>" target="_blank">
+                                <img class="cm_z1 cm_wh100 cm_bs100 cm_br02 lazy" data-original="<%=articleList.Records[i].Thumbnail%>"/>
+                            </a>
+                    </div>
+                </div>
+                <ul class="cm_pc_12 cm_pl12 cm_pr0 cm_pr cm_minh7 info_list_ul">
+                    <li class="cm_pc_12 cm_pr cm_mtb02 info_list_name">
+                        <strong class="cm_fs12 cm_fwb smallSize"><a class="cm_c3c" href="<%=site.path%>/a/<%=moment(articleList.Records[i].EditDate).format('YYYYMMDD')%><%=articleList.Records[i].Id%>.html" title="<%=articleList.Records[i].Title%>" target="_blank"><%=articleList.Records[i].Title%></a></strong>
+                    </li>
+                    <li class="cm_pc_12 cm_pr cm_wb_b cm_mb1 mobile_hide" id="detail">
+                        <%=articleList.Records[i].Description%>
+                    </li>
+                    <li class="cm_pc_12 cm_pr info_list_tag"> 
+                        <span class="cm_fl cm_fs08 cm_c5c mobile_hide"><%=articleList.Records[i].EditDate%></span>
+                        <span class="cm_fl cm_fs08 cm_c5c cm_mrl05 noMarginLeft">标签:</span>
+                        <% for(i2 in articleList.Records[i].Keywords){%>
+                        <span class="cm_fl cm_fs08 cm_ml05"><a class="cm_c1c" href="<%=site.path%>/k/<%=articleList.Records[i].Keywords[i2].Alias%>/" title="<%=articleList.Records[i].Keywords[i2].Name%>" target="_blank"><%=articleList.Records[i].Keywords[i2].Name%></a></span>
+                        <% }%>
+                    </li>										
+                </ul>
+            </div>
+        </li>
+        <% } %>
+        <% if(articleList.Records[i].Type==5){ %>
+            <li class="cm_pc_12 cm_pr cm_bb1ce info_li">
+            <div class="cm_pc_12 cm_pr cm_mtb1 listNewHeight ">
+                <div class="cm_pa cm_tl0 cm_z2  ">
+                    <div class="cm_pr cm_w11 cm_h7 scaleImg topImg">
+                        <a class="" href="<%=site.path%>/pics/<%= articleList.Records[i].Id %>.html" title="<%=articleList.Records[i].Title%>" target="_blank">
+                                <img class="cm_z1 cm_wh100 cm_bs100 cm_br02 lazy" data-original="<%=articleList.Records[i].Thumbnail%>"/>
+                            </a>
+                    </div>
+                </div>
+                <ul class="cm_pc_12 cm_pl12 cm_pr0 cm_pr cm_minh7 info_list_ul">
+                    <li class="cm_pc_12 cm_pr cm_mtb02 info_list_name">
+                        <strong class="cm_fs12 cm_fwb smallSize"><a class="cm_c3c" href="<%=site.path%>/pics/<%= articleList.Records[i].Id %>.html" title="<%=articleList.Records[i].Title%>" target="_blank"><%=articleList.Records[i].Title%></a></strong>
+                    </li>
+                    <li class="cm_pc_12 cm_pr cm_wb_b cm_mb1 mobile_hide">
+                        <a class="" href="<%=site.path%>/pics/<%= articleList.Records[i].Id %>.html" title="<%=articleList.Records[i].Title%>" target="_blank"><span class="cm_fs09 cm_c4c" style="display:block;height:42px;overflow:hidden;"><%=articleList.Records[i].Description%></span></a>
+                    </li>
+                    <li class="cm_pc_12 cm_pr info_list_tag">
+                        <span class="cm_fl cm_fs08 cm_c5c mobile_hide"><%=articleList.Records[i].EditDate%></span>
+                        <span class="cm_fl cm_fs08 cm_c5c cm_mrl05 noMarginLeft">标签:</span>
+                        <% for(i2 in articleList.Records[i].Keywords){%>
+                        <span class="cm_fl cm_fs08 cm_ml05"><a class="cm_c1c" href="<%=site.path%>/k/<%=articleList.Records[i].Keywords[i2].Alias%>/" title="<%=articleList.Records[i].Keywords[i2].Name%>" target="_blank"><%=articleList.Records[i].Keywords[i2].Name%></a></span>
+                        <% }%>
+                    </li>										
+                </ul>
+            </div>
+        </li>
+        <% } %>
+    <% }%>
+    
+</ul>
+
+
+   

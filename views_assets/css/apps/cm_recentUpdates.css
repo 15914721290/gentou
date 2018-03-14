@@ -1,0 +1,53 @@
+#cm_recentUpdates{
+        overflow:hidden;
+        background-color: #fff;
+    }
+    .cm_picsBottom{
+        background-color: #fff;
+        padding-bottom: 40px;
+    }
+    .updatesMain{
+        padding: 0 20px;
+
+    }
+    .updatesMain .updatesHead{
+        height: 50px;
+        border-bottom: 1px solid #ddd;
+    }
+    .updatesMain .updatesHead h2{
+        display: inline-block;
+        font-size: 18px;
+        color: #cea770;
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 3px solid #cea770;
+    }
+    .updatesMain .updatesBody{
+        overflow: hidden;
+    }
+    .updatesMain .updatesBody .updatesLi{
+        height: 100px;
+        margin-top: 20px;
+        padding-left: 160px;
+        position: relative;;
+    }
+    .updatesMain .updatesBody .updatesLi a img{
+        height: 100%;
+        width: 100%;
+    }
+    .updatesMain .updatesBody .updatesLi .updateLink{
+        position: absolute;
+        width: 150px;
+        height: 100px;
+        top: 0px;
+        left: 0px;
+        text-align: center;
+    }
+    .updatesMain .updatesBody .updatesLi a.updateText{
+        display: inline-block;
+        max-height: 96px;
+        font-size: 14px;
+        color: #666;
+        width: 100%;
+        text-decoration: none;
+    }

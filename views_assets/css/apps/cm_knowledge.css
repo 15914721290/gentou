@@ -1,0 +1,287 @@
+.hide{
+    display: none;
+}
+.common-knowledge-wrapper{
+    margin-bottom:20px;
+}
+.common-knowledge{
+    padding:0 20px;
+    background: #ffffff;
+}
+.common-knowledge .knowledge-title{
+    /*height: 38px;*/
+    line-height: 38px;
+    font-size: 18px;
+    padding-top: 20px;
+    border-bottom: 1px solid #cccccc;
+    overflow: hidden;
+}
+.common-knowledge .knowledge-title .h2{
+    display: inline-block;
+    color: #cea770;
+    padding: 0 2px;
+    font-size: 18px;
+    position: relative;
+}
+.common-knowledge .knowledge-title .h2:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #cea770;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.common-knowledge .knowledge-tab{
+    width: 100%;
+    height: 44px;
+    background: #f2f8ff;
+    line-height: 44px;
+    margin-top: 20px;
+}
+.common-knowledge .knowledge-tab .knowledge-tab-wrap{
+    width: 100%;
+    height: 44px;
+    font-size:0;
+    float: left;
+}
+.common-knowledge .knowledge-tab .knowledge-tab-wrap span{
+    display: inline-block;
+    width: 16.66666667%;
+    text-align: center;
+    font-size: 16px;
+    padding:0 20px;
+
+    cursor: pointer;
+}
+/*.common-knowledge .knowledge-tab .knowledge-tab-wrap span a{*/
+    /*color: #ffffff;*/
+/*}*/
+.common-knowledge .knowledge-tab .knowledge-tab-wrap .active{
+    background: #cea770;
+}
+.common-knowledge .knowledge-tab .knowledge-tab-wrap .active a:hover{
+    color: #ffffff!important;
+}
+.common-knowledge .knowledge-tab .knowledge-tab-wrap .active a{
+    color: #ffffff;
+}
+/*.common-knowledge .knowledge-tab .more{
+    display: none;
+    width: 75px;
+    height: 44px;
+    text-align: center;
+    float: right;
+    background: url("../img/xiaj.png") no-repeat 85% 50%;
+    cursor: pointer;
+}*/
+.common-knowledge .knowledge-con-wrap{
+    padding:10px 0 0 0;
+}
+.common-knowledge .knowledge-con-wrap .knowledge-con .item{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding:20px 0;
+    border-bottom:1px solid #e5e5e5;
+}
+.common-knowledge .knowledge-con-wrap .knowledge-con .item .left{
+    width: 184px;
+    height: 115px;
+    float: left;
+}
+.common-knowledge .knowledge-con-wrap .knowledge-con .item .left img{
+    width: 100%;
+    height: 100%;
+    border:none;
+}
+.common-knowledge .knowledge-con-wrap .knowledge-con .item .right{
+    width: 542px;
+    height: 115px;
+    float: right;
+}
+.common-knowledge .knowledge-con-wrap .knowledge-con .item .right > strong{
+    font-size: 18px;
+    font-weight: 700;
+}
+.common-knowledge .knowledge-con-wrap .knowledge-con .item .right > strong .keyWords{
+    color: #ed4747;
+    font-weight: 700;
+}
+.common-knowledge .knowledge-con-wrap .knowledge-con .item .right .detail{
+    font-size: 14px;
+    line-height: 26px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    color: #666;
+    height: 52px;
+    overflow: hidden;
+}
+.common-knowledge .knowledge-con-wrap .knowledge-con .item .right .bottom{
+    font-size:0;
+}
+.common-knowledge .knowledge-con-wrap .knowledge-con .item .right .bottom span{
+    font-size:12px;
+    color: #999;
+}
+.common-knowledge .knowledge-con-wrap .knowledge-con .item .right .bottom .class a{
+    color: #cea770;
+}
+.common-knowledge .knowledge-con-wrap .knowledge-con .item .right .bottom .time{
+    margin-right: 20px;
+}
+.common-knowledge .knowledge-con-wrap .loadMore {
+    padding:30px 0 35px 0;
+}
+.common-knowledge .knowledge-con-wrap .loadMore .loadMoreInner{
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: #666;
+    background: #f2f8ff;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .common-knowledge-wrapper{
+        margin-bottom: 0;
+    }
+    .common-knowledge{
+        padding:0;
+    }
+    .common-knowledge .knowledge-title{
+        padding:0 ;
+        height: 45px;
+        line-height: 45px;
+    }
+    .common-knowledge .knowledge-title .h2{
+        font-size: 18px;
+        margin: 0 20px;
+        border-bottom:3px solid #cea770;
+    }
+    .common-knowledge .knowledge-title .h2:after{
+        background: #ffffff;
+    }
+    .common-knowledge .knowledge-tab{
+        height: 40px;
+        line-height: 40px;
+        position: relative;
+    }
+    .common-knowledge .knowledge-tab .knowledge-tab-wrap{
+        width: 100%;
+        height: 45px;
+        white-space: nowrap;
+        overflow: auto;
+    }
+    .common-knowledge .knowledge-tab .knowledge-tab-wrap::-webkit-scrollbar {
+        display: none;
+    }
+    .common-knowledge .knowledge-tab .knowledge-tab-wrap::-mos-scrollbar {
+        display: none;
+    }
+    .common-knowledge .knowledge-tab .knowledge-tab-wrap::-mz-scrollbar {
+        display: none;
+    }
+    .common-knowledge .knowledge-tab .knowledge-tab-wrap::-o-scrollbar {
+        display: none;
+    }
+    .common-knowledge .knowledge-tab .knowledge-tab-wrap span{
+        width: auto;
+        font-size: 14px;
+        padding:0 15px ;
+    }
+    .common-knowledge .knowledge-tab .knowledge-tab-wrap span a:hover{
+        text-decoration: none;
+    }
+    .common-knowledge .knowledge-tab .more{
+        display: none;
+    }
+    /*只有标题*/
+    .onlyTitle .knowledge-con-wrap{
+        padding: 0;
+    }
+    .onlyTitle .knowledge-con-wrap .knowledge-con{
+        padding: 0 20px;
+    }
+    .onlyTitle .knowledge-con-wrap .con-inner .knowledge-con{
+        padding-bottom: 25px;
+    }
+    .onlyTitle .knowledge-con-wrap .knowledge-con .item{
+        height: 40px;
+        line-height: 40px;
+        padding:0;
+        border:none;
+        
+    }
+    .onlyTitle .knowledge-con-wrap .knowledge-con .item .left{
+        display: none;
+    }
+    .onlyTitle .knowledge-con-wrap .knowledge-con .item .right{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+    }
+    .onlyTitle .knowledge-con-wrap .knowledge-con .item .right .detail{
+        display: none;
+    }
+    .onlyTitle .knowledge-con-wrap .knowledge-con .item .right .bottom{
+        display: none;
+    }
+    .onlyTitle .knowledge-con-wrap .knowledge-con .item .right > strong{
+        font-size: 14px;
+        font-weight: normal;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .onlyTitle .knowledge-con-wrap .knowledge-con .item .right > strong a{
+        color: #666;
+    }
+    .common-knowledge .knowledge-con-wrap .loadMore{
+        padding:0;
+    }
+    .common-knowledge .knowledge-con-wrap .loadMore .loadMoreInner{
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        background: #f6f6f6;
+        color: #3657b2;
+    }
+    /*百科*/
+    .baike .knowledge-con-wrap .knowledge-con .item{
+        width:calc(100% - 60px);
+        height: 70px;
+        padding: 20px 15px 18px 15px;
+    }
+    .baike .knowledge-con-wrap .knowledge-con .item .left{
+        width: 110px;
+        height: 70px;
+    }
+    .baike .knowledge-con-wrap .knowledge-con .item .right{
+        width: 220px;
+        height: 70px;
+        overflow: hidden;
+        position: relative;
+    }
+    .baike .knowledge-con-wrap .knowledge-con .item .right .detail{
+        display: none;
+    }
+    .baike .knowledge-con-wrap .knowledge-con .item .right > strong{
+        font-size: 14px;
+        line-height: 23px;
+    }
+    .common-knowledge .knowledge-con-wrap .knowledge-con .item .right .bottom{
+        position: absolute;
+        bottom: 0;
+    }
+    .baike .knowledge-con-wrap .knowledge-con .item .right .bottom span{
+        font-size: 12px;
+    }
+    .baike .knowledge-con-wrap .knowledge-con .item .right .bottom .time{
+        display: none;
+    }
+}

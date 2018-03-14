@@ -1,0 +1,162 @@
+<% if(channels['pics']){%>
+<li class="cm_pc_12 cm_bk01 cm_bt3c1 picsMain cm_pc">
+        <div class="cm_pc_3 cm_hl3 cm_pl20px"><a href="<%=site.path%>/<%=channels['pics'].Alias%>/" title="<%=channels['pics'].Name%>" target="_blank"><span class="cm_fs15 cm_c1c"><%=channels['pics'].Name%></span></a></div>
+        <div class="cm_pc_9 cm_hl3 cm_pr20px">
+                <ul class="cm_fr cm_pr  cm_c4c">
+                    <%var picsChildren=childrenList.filter(x=>x.ParentId==channels['pics'].AggregateId);
+                      for(i4 in picsChildren){%>
+                        <li class="cm_fl"><a class="cm_fs11 cm_c4c" href="<%=site.path%>/<%=channels['pics'].Alias%>/<%=picsChildren[i4].Alias%>/" title="<%=picsChildren[i4].Name%>" target="_blank"><%=picsChildren[i4].Name%></a></li>
+                        <li class="cm_fl cm_mrl05">|</li>
+                    <%}%>
+                    <li class="cm_fl cm_pr"><a class="cm_fl cm_c1c" href="<%=site.path%>/<%=channels['pics'].Alias%>/" title="<%=channels['pics'].Name%>" target="_blank">MORE</a></li>
+                    <li class="cm_fl cm_pr"><img class="index_column_btn" src="<%=site.path%>/images/index/6.png" width="6" height="8"></li>
+                </ul>
+        </div>		
+    </li>
+    <% }%>
+    <li class="cm_pc_12 cm_bf picsMain cm_pc">
+            <ul class="cm_pc_12 cm_pt20px cm_pr20px picsLeft cm_tc">
+                <% for( i in newArticle ){ %>
+                    <li class="cm_mob_12 cm_pc_3 cm_mb1">
+                        <div class="cm_pc_12 cm_pl20px cm_pr">
+                            <a href="<%=site.path%>/pics/<%= newArticle[i].Id %>.html  %>" title="<%=newArticle[i].Title%>" target="_blank">
+                                <div class="cm_pc_12 cm_h13 scaleImg">
+                                <img class="cm_wh100 cm_bs100 lazy" data-original="<%=newArticle[i].Thumbnail%>"/>
+                            </div>
+                        </a>
+                            <a href="<%=site.path%>/pics/<%= newArticle[i].Id %>.html  %>" title="<%=newArticle[i].Title%>" target="_blank">
+                                <div class="cm_pa cm_bl0 cm_z2 cm_w100 cm_pl20px cm_hl2">
+                                    <span class="cm_pc_12 cm_o08 cm_fs08 cm_bk02 cm_cf"><%=newArticle[i].Title%></span>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                <% } %>
+            </ul>
+
+            <ul class="cm_pc_12 cm_pt20px cm_pr20px picsLeft cm_tc">
+                <% var types26=indexList.types26;for(i26 in types26){%>
+                    <%if(i26<8){%>
+                    <li class="cm_mob_12 cm_pc_3 cm_mb1">
+                        <div class="cm_pc_12 cm_pl20px cm_pr">
+                            <a href="<%if(types26[i26].Url){%><%=types26[i26].Url%><%}else{%><%=site.path%>/a/<%=moment(types26[i26].EditDate).format('YYYYMMDD')%><%=types26[i26].Id%>.html<%}%>" title="<%=types26[i26].Title%>" target="_blank">
+                                <div class="cm_pc_12 cm_h13 scaleImg">
+                                <img class="cm_wh100 cm_bs100 lazy" data-original="<%=types26[i26].Thumbnail%>"/>
+                            </div>
+                        </a>
+                            <a href="<%if(types26[i26].Url){%><%=types26[i26].Url%><%}else{%><%=site.path%>/a/<%=moment(types26[i26].EditDate).format('YYYYMMDD')%><%=types26[i26].Id%>.html<%}%>" title="<%=types26[i26].Title%>" target="_blank">
+                                <div class="cm_pa cm_bl0 cm_z2 cm_w100 cm_pl20px cm_hl2">
+                                    <span class="cm_pc_12 cm_o08 cm_fs08 cm_bk02 cm_cf"><%=types26[i26].Title%></span>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <%}%>
+                <%}%>
+            </ul>	
+    </li>
+
+
+<!--移动端图库-->
+    <li class=" cm_mob m_picMain">
+        <div class="picHead">
+            <h2>两性图库</h2>
+            <span><a href="<%=site.path%>/<%=channels['pics'].Alias%>/">更多+</a></span>
+        </div>
+        <div class="picBody">
+            <div class="m_swiper-container">
+            <div class="swiper-wrapper">
+                <% var types26=indexList.types26;for(i26 in types26){%>
+                    <%if(i26<8){%>
+                <div class="swiper-slide"> 
+                    <a href="<%if(types26[i26].Url){%><%=types26[i26].Url%><%}else{%><%=site.path%>/a/<%=moment(types26[i26].EditDate).format('YYYYMMDD')%><%=types26[i26].Id%>.html<%}%>" title="<%=types26[i26].Title%>" target="_blank">
+                        <img src="<%=types26[i26].Thumbnail%>" alt="">
+                        <p><%=types26[i26].Title%></p>
+                    </a>
+                </div>
+               
+                <%}%>
+                <%}%>
+            </div>
+            </div>
+
+        </div>
+        
+    </li>
+    <style>
+        @media (max-width: 768px){
+            .m_picMain{
+                background: #fff;
+                overflow:hidden;
+            }
+            .m_picMain .picHead {
+                height: 46px;
+                line-height: 46px;
+                border-bottom: 1px solid #ddd;
+                margin: 0 20px;
+            }
+            .m_picMain .picHead h2{
+                display: inline-block;
+                height: 46px;
+                line-height: 46px;
+                font-size: 15px;
+                color: #faf9f9;
+                font-weight: 700;
+            }
+             .m_picMain .picHead span a{
+                 float: right;
+                 font-size: 14px;
+                 color: #999;
+             }
+             .m_picMain .picBody{
+                 height: 250px;
+             }
+            .m_swiper-container{
+                 width: 120%;
+                height: 200px;
+                margin: 25px 0;
+                margin-left: -30px;
+            }
+            .m_swiper-container .swiper-slide{
+                /*position: absolute;*/
+            }
+            .m_swiper-container .swiper-slide a{
+                position: relative;
+                width: 250px;
+                height: 180px;
+            }
+              .m_swiper-container .swiper-slide img{
+                 width: 100%;
+                 height: 100%;
+             }
+             .m_swiper-container .swiper-slide p{
+                 position: absolute;
+                 height: 23px;
+                 line-height: 23px;
+                 background: rgba(0,0,0,.5);
+                 left: 0;
+                 bottom: 0;
+                 color: #fff;
+                 font-size: 12px;
+             }
+             .swiper-slide-visible{
+                transform:scale(0.8);
+                -webkit-transform:scale(0.8);
+                -o-transform:scale(0.8);
+                -ms-transform:scale(0.8);
+                -moz-transform:scale(0.8);
+                opacity:0.5;
+             }
+             .swiper-slide-active{
+                transform:scale(1);
+                -webkit-transform:scale(1);
+                -o-transform:scale(1);
+                -ms-transform:scale(1);
+                -moz-transform:scale(1);
+                opacity:1;
+             }
+            
+
+        }
+    
+    </style>

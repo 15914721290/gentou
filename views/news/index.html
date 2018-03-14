@@ -1,0 +1,23 @@
+<% include ../common/header.html %>
+    <link rel="stylesheet" href="<%=site.path%>/css/news/news.css">
+    <link rel="stylesheet" href="<%=site.path%>/js/jqplugin/idangerous.swiper.min.css">
+    <link rel="stylesheet" href="<%=site.path%>/css/apps/index01.css">
+    <div>
+        <% include ./tpl/news_top.html %>
+            <% include ./tpl/news_main.html %>
+                <% include ./tpl/news_zx.html %>
+
+
+    </div>
+
+    <script src="<%=site.path%>/bundle/news_index.js"></script>
+    <!-- <script src="<%=site.path%>/bundle/index_index.js"></script> -->
+    <script>
+        $(".fl_top li").click(function() {
+                var i = $(this).index();
+                console.log(i);
+                $(this).addClass('cm_c1c').siblings().removeClass('cm_c1c');
+                $('.fl_bot').eq(i).show().siblings().hide();
+            })
+            // console.log($)
+    </script>

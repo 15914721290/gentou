@@ -1,0 +1,106 @@
+<div class="detailList">
+    <div class="info_detailHead">
+        <h3>相关资讯</h3>
+    </div>
+    <div class="info_detailBody">
+        <ul>
+            <%  for(var i=0;i<8;i++){  %>
+            <li class="info_detailLi">
+                <span class="info_left">
+                    <a href="" title target="_blank">
+                      子闻有腥味，用舌头舔有酸味。锈色辨 伪是识别大清银币的关键。
+                    </a>
+                </span>
+                <span class="info_right">2017-8-9</span>
+            </li>
+            <% } %>
+          
+        </ul>
+    </div>
+
+</div>
+
+<style>
+    .detailList{
+        background: #fff;
+        margin-bottom: 20px;
+        padding: 20px ;
+    }
+    .info_detailHead{
+        border-bottom: 1px solid #cccccc;
+    }
+    .info_detailHead h3{
+        height: 38px;
+        font-size: 18px;
+        color: #cea770;
+        line-height: 38px;
+        display: inline-block;
+        border-bottom: 3px solid #cea770;
+
+    }
+    .info_detailBody{
+        padding: 20px 0;
+    }
+    .info_detailBody .info_detailLi{
+        height: 40px;
+        line-height: 40px;
+    }
+    .info_detailBody .info_detailLi a{
+        position: relative;
+        /*display: inline-block;*/
+        font-size: 16px;
+        text-decoration: none;
+        padding-left: 20px;
+        max-width: 580px;
+        color: #666;
+       
+        
+
+    }
+    .info_detailBody .info_detailLi a i{
+        position: absolute;
+        left:0px;
+        top: 0px;
+        font-style:norma;
+        font-size: 30px;
+        
+
+    }
+    .info_detailBody .info_detailLi .info_left{
+        display: inline-block;
+        width: 70%;
+         overflow: hidden;
+        white-space: nowrap;
+    }
+    .info_detailBody .info_detailLi .info_right{
+        float: right;
+        margin-right: 20px;
+    }
+    @media screen and (max-width: 768px){
+        .detailList{
+            padding: 0;
+        }
+        .info_detailBody .info_detailLi .info_right{
+            display: none;
+        }
+        .info_detailBody .info_detailLi .info_left{
+            width: 100%;
+        }
+        .info_detailHead h3{
+            margin: 0 20px;
+        }
+        .info_detailBody{
+            padding: 20px;
+
+        }
+        .info_detailBody .info_detailLi a{
+            padding-left: 0;
+        }
+        .info_detailBody .info_detailLi a{
+            font-size: 14px;
+        }
+        
+    }
+
+
+</style>
